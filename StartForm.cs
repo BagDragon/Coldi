@@ -5,6 +5,20 @@ namespace Coldi
         public StartForm()
         {
             InitializeComponent();
+
+            StartBTN_Design();
+        }
+
+      public void StartBTN_Design()
+        {
+            StartBTN.BackColor = Color.FromArgb(189, 52, 52);
+
+            
+            
+            
+            
+
+
         }
     }
 }

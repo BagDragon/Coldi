@@ -28,18 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            StartBTN = new Button();
             SuspendLayout();
+            // 
+            // StartBTN
+            // 
+            StartBTN.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            StartBTN.BackColor = Color.Transparent;
+            StartBTN.FlatAppearance.BorderSize = 0;
+            StartBTN.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            StartBTN.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            StartBTN.Font = new Font("Segoe UI Symbol", 39.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            StartBTN.ForeColor = Color.White;
+            StartBTN.Location = new Point(505, 585);
+            StartBTN.Name = "StartBTN";
+            StartBTN.Size = new Size(216, 83);
+            StartBTN.TabIndex = 0;
+            StartBTN.Text = "Start";
+            StartBTN.UseVisualStyleBackColor = false;
             // 
             // StartForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(861, 500);
+            BackColor = Color.Maroon;
+            ClientSize = new Size(1181, 703);
+            Controls.Add(StartBTN);
+            MaximumSize = new Size(1197, 742);
+            MinimumSize = new Size(1197, 742);
             Name = "StartForm";
             Text = "Coldi";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button StartBTN;
     }
 }

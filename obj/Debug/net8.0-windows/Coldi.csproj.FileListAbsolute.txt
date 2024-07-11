@@ -1,0 +1,17 @@
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.StartForm.resources
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.csproj.GenerateResource.cache
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.AssemblyInfoInputs.cache
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.AssemblyInfo.cs
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.csproj.CoreCompileInputs.cache
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.sourcelink.json
+C:\Users\пк\Desktop\Projects\Coldi\bin\Debug\net8.0-windows\Coldi.exe
+C:\Users\пк\Desktop\Projects\Coldi\bin\Debug\net8.0-windows\Coldi.deps.json
+C:\Users\пк\Desktop\Projects\Coldi\bin\Debug\net8.0-windows\Coldi.runtimeconfig.json
+C:\Users\пк\Desktop\Projects\Coldi\bin\Debug\net8.0-windows\Coldi.dll
+C:\Users\пк\Desktop\Projects\Coldi\bin\Debug\net8.0-windows\Coldi.pdb
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.dll
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\refint\Coldi.dll
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.pdb
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.genruntimeconfig.cache
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\ref\Coldi.dll
