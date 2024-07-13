@@ -1,3 +1,6 @@
+using Npgsql;
+using System.Data;
+
 namespace Coldi
 {
     public partial class StartForm : Form
@@ -7,18 +10,18 @@ namespace Coldi
             InitializeComponent();
 
             StartBTN_Design();
+
+            
         }
 
-      public void StartBTN_Design()
+      
+
+        public void StartBTN_Design()
         {
             StartBTN.BackColor = Color.FromArgb(189, 52, 52);
 
-            
-            
-            
-            
-
-
         }
+
+       
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Coldi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2266851ab69918518263083b1d85faaf129e58e4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d26114f68df8f9d216c3bb57a0e80be257ed866")]
 [assembly: System.Reflection.AssemblyProductAttribute("Coldi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Coldi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
