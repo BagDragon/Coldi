@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,10 +16,15 @@ namespace Coldi
     {
         public Authorization()
         {
-            InitializeComponent();           
+            InitializeComponent();
+
+           
+
+
+
         }
 
-
+     
         string vStrConnection = "Server= localhost; port= 5432; user id= postgres; password= 93538565; database= UserBD;";
         NpgsqlConnection vCon;
         NpgsqlCommand vCmd;
@@ -27,7 +33,7 @@ namespace Coldi
         private void connection()
         {
             vCon = new NpgsqlConnection();
-            vCon.ConnectionString = vStrConnection;
+            vCon.ConnectionString = vStrConnection;//connect 
 
             if (vCon.State == ConnectionState.Closed)
             {
@@ -51,18 +57,18 @@ namespace Coldi
         }
 
         private void Authorization_Load(object sender, EventArgs e)
-        { 
-           connection();
-        }
-
-        private void BtnOk_Click(object sender, EventArgs e)
         {
-            DataTable dtgetdata = new DataTable();
-            dtgetdata = getdata("select * from users;");
-
-            DataView dv = dtgetdata.DefaultView;
-            dgData.DataSource = dtgetdata;
+            connection();
         }
 
+        private void Log_in_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void unregistered_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

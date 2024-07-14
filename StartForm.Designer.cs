@@ -118,6 +118,7 @@
             // 
             // label1
             // 
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 60F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label1.ForeColor = Color.White;
             label1.Location = new Point(488, 2);
@@ -129,6 +130,7 @@
             // 
             // label2
             // 
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 24.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             label2.ForeColor = Color.White;
             label2.Location = new Point(456, 94);
@@ -157,7 +159,6 @@
             MinimumSize = new Size(1197, 742);
             Name = "StartForm";
             Text = "Coldi";
-            
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
