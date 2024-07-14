@@ -12,7 +12,7 @@ namespace Coldi
 
             StartBTN_Design();
 
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(this.ClientRectangle, Color.FromArgb(111, 0, 0), Color.FromArgb(0,0,0), LinearGradientMode.ForwardDiagonal);
+            LinearGradientBrush gradientBrush = new LinearGradientBrush(this.ClientRectangle, Color.FromArgb(111, 0, 0), Color.FromArgb(0, 0, 0), LinearGradientMode.ForwardDiagonal);
 
             // Fill the form's background with the gradient brush
             this.Paint += (sender, e) =>
@@ -22,7 +22,7 @@ namespace Coldi
 
         }
 
-      
+
 
         public void StartBTN_Design()
         {
@@ -30,6 +30,9 @@ namespace Coldi
 
         }
 
-       
+        private void StartBTN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

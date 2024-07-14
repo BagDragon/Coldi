@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authorization));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -35,6 +36,7 @@
             loginBox = new TextBox();
             passwordBox = new TextBox();
             unregistered = new Label();
+            Back = new Button();
             SuspendLayout();
             // 
             // label1
@@ -65,23 +67,25 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI Semilight", 69.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label3.Font = new Font("Arial Rounded MT Bold", 69.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(309, 18);
+            label3.Location = new Point(238, 33);
             label3.Name = "label3";
-            label3.Size = new Size(594, 124);
+            label3.Size = new Size(652, 108);
             label3.TabIndex = 2;
             label3.Text = "Authorization";
             // 
             // Log_in
             // 
-            Log_in.BackColor = Color.Firebrick;
-            Log_in.FlatAppearance.BorderSize = 50;
-            Log_in.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            Log_in.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            Log_in.BackColor = Color.FromArgb(192, 0, 0);
+            Log_in.FlatAppearance.BorderColor = Color.FromArgb(192, 0, 0);
+            Log_in.FlatAppearance.BorderSize = 0;
+            Log_in.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 0, 0);
+            Log_in.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 0, 0);
+            Log_in.FlatStyle = FlatStyle.Flat;
             Log_in.Font = new Font("Segoe UI Light", 48F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Log_in.ForeColor = Color.White;
-            Log_in.Location = new Point(380, 550);
+            Log_in.Location = new Point(391, 543);
             Log_in.Name = "Log_in";
             Log_in.Size = new Size(405, 97);
             Log_in.TabIndex = 3;
@@ -95,7 +99,7 @@
             loginBox.BorderStyle = BorderStyle.None;
             loginBox.Font = new Font("Segoe UI", 54.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             loginBox.ForeColor = Color.White;
-            loginBox.Location = new Point(450, 219);
+            loginBox.Location = new Point(450, 213);
             loginBox.Name = "loginBox";
             loginBox.Size = new Size(422, 98);
             loginBox.TabIndex = 4;
@@ -108,6 +112,7 @@
             passwordBox.ForeColor = Color.White;
             passwordBox.Location = new Point(450, 357);
             passwordBox.Name = "passwordBox";
+            passwordBox.PasswordChar = '*';
             passwordBox.Size = new Size(422, 98);
             passwordBox.TabIndex = 5;
             // 
@@ -115,13 +120,28 @@
             // 
             unregistered.AutoSize = true;
             unregistered.BackColor = Color.Transparent;
-            unregistered.Font = new Font("Segoe UI Light", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            unregistered.Font = new Font("Segoe UI Semilight", 20.25F, FontStyle.Underline, GraphicsUnit.Point, 204);
+            unregistered.ForeColor = Color.Navy;
             unregistered.Location = new Point(391, 500);
             unregistered.Name = "unregistered";
-            unregistered.Size = new Size(384, 37);
+            unregistered.Size = new Size(400, 37);
             unregistered.TabIndex = 6;
             unregistered.Text = "Click here if you are unregistered";
             unregistered.Click += unregistered_Click;
+            // 
+            // Back
+            // 
+            Back.BackColor = Color.Transparent;
+            Back.BackgroundImage = (Image)resources.GetObject("Back.BackgroundImage");
+            Back.FlatAppearance.BorderSize = 0;
+            Back.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            Back.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            Back.FlatStyle = FlatStyle.Flat;
+            Back.Location = new Point(25, 566);
+            Back.Name = "Back";
+            Back.Size = new Size(94, 92);
+            Back.TabIndex = 7;
+            Back.UseVisualStyleBackColor = false;
             // 
             // Authorization
             // 
@@ -129,6 +149,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
             ClientSize = new Size(1181, 670);
+            Controls.Add(Back);
             Controls.Add(unregistered);
             Controls.Add(passwordBox);
             Controls.Add(loginBox);
@@ -137,7 +158,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Authorization";
-            Text = "Form1";
+            Text = "Coldi";
             Load += Authorization_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -152,5 +173,6 @@
         private TextBox loginBox;
         private TextBox passwordBox;
         private Label unregistered;
+        private Button Back;
     }
 }

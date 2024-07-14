@@ -53,12 +53,13 @@
             StartBTN.FlatAppearance.MouseOverBackColor = Color.Transparent;
             StartBTN.Font = new Font("Segoe UI Symbol", 39.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             StartBTN.ForeColor = Color.White;
-            StartBTN.Location = new Point(518, 608);
+            StartBTN.Location = new Point(502, 608);
             StartBTN.Name = "StartBTN";
             StartBTN.Size = new Size(216, 83);
             StartBTN.TabIndex = 0;
             StartBTN.Text = "Start";
             StartBTN.UseVisualStyleBackColor = false;
+            StartBTN.Click += StartBTN_Click;
             // 
             // pictureBox1
             // 

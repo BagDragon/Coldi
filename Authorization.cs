@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using NpgsqlTypes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,17 +19,26 @@ namespace Coldi
         {
             InitializeComponent();
 
-           
 
+            LinearGradientBrush gradientBrush = new LinearGradientBrush(this.ClientRectangle, Color.FromArgb(20, 20, 20), Color.FromArgb(120, 0, 0), LinearGradientMode.Vertical);
+
+            // Fill the form's background with the gradient brush
+            this.Paint += (sender, e) =>
+            {
+                e.Graphics.FillRectangle(gradientBrush, this.ClientRectangle);
+            };
 
 
         }
 
-     
+        
+
+
+
         string vStrConnection = "Server= localhost; port= 5432; user id= postgres; password= 93538565; database= UserBD;";
-        NpgsqlConnection vCon;
         NpgsqlCommand vCmd;
 
+        NpgsqlConnection vCon;
 
         private void connection()
         {
@@ -42,33 +52,42 @@ namespace Coldi
 
         }
 
-        public DataTable getdata(string sql)
-        {
-            DataTable dt = new DataTable();
-            connection();
-
-            vCmd = new NpgsqlCommand();
-            vCmd.Connection = vCon;
-            vCmd.CommandText = sql;
-
-            NpgsqlDataReader dr = vCmd.ExecuteReader();
-            dt.Load(dr);
-            return dt;
-        }
+      
 
         private void Authorization_Load(object sender, EventArgs e)
         {
-            connection();
+            
+
+           
         }
 
         private void Log_in_Click(object sender, EventArgs e)
         {
+            var login = loginBox.Text;
+            var password = passwordBox.Text;
 
+            int rowsCount = 0;
+            
+
+            connection();
+            vCmd = new NpgsqlCommand ("SELECT COUNT(*) FROM users WHERE login = @login AND password = @pass");
+            vCmd.Parameters.Add("@login", NpgsqlDbType.Text).Value = login;
+            vCmd.Parameters.Add("@pass", NpgsqlDbType.Text).Value = password;
+            rowsCount = (int)vCmd.ExecuteScalar();
+            if (rowsCount > 0) 
+            {
+                MessageBox.Show("there is an account");
+
+            }
+            else
+            {
+                MessageBox.Show("Пользователь не найден");
+            }
         }
 
         private void unregistered_Click(object sender, EventArgs e)
         {
-            
+           
         }
     }
 }
