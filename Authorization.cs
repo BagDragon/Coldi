@@ -70,19 +70,33 @@ namespace Coldi
             
 
             connection();
-            vCmd = new NpgsqlCommand ("SELECT COUNT(*) FROM users WHERE login = @login AND password = @pass");
-            vCmd.Parameters.Add("@login", NpgsqlDbType.Text).Value = login;
-            vCmd.Parameters.Add("@pass", NpgsqlDbType.Text).Value = password;
-            rowsCount = (int)vCmd.ExecuteScalar();
-            if (rowsCount > 0) 
+            
+            using (vCmd = new NpgsqlCommand("SELECT COUNT(*) FROM users WHERE login = @login AND password = @pass", vCon))
             {
-                MessageBox.Show("there is an account");
+                vCmd.Parameters.Add("@login", NpgsqlDbType.Text).Value = login;
+                vCmd.Parameters.Add("@pass", NpgsqlDbType.Text).Value = password;
 
+                // Execute the command and get the result
+                using (NpgsqlDataReader reader = vCmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        rowsCount = Convert.ToInt32(reader[0]); // Get the count from the reader
+                    }
+                }
+
+                if (rowsCount > 0)
+                {
+                    MessageBox.Show("there is an account");
+                }
+                else
+                {
+                    MessageBox.Show("Пользователь не найден");
+                }
             }
-            else
-            {
-                MessageBox.Show("Пользователь не найден");
-            }
+
+            // Close the connection after the operation
+            vCon.Close();
         }
 
         private void unregistered_Click(object sender, EventArgs e)
