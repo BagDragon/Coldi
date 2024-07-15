@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authorization));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -36,7 +35,6 @@
             loginBox = new TextBox();
             passwordBox = new TextBox();
             unregistered = new Label();
-            Back = new Button();
             SuspendLayout();
             // 
             // label1
@@ -129,27 +127,12 @@
             unregistered.Text = "Click here if you are unregistered";
             unregistered.Click += unregistered_Click;
             // 
-            // Back
-            // 
-            Back.BackColor = Color.Transparent;
-            Back.BackgroundImage = (Image)resources.GetObject("Back.BackgroundImage");
-            Back.FlatAppearance.BorderSize = 0;
-            Back.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            Back.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            Back.FlatStyle = FlatStyle.Flat;
-            Back.Location = new Point(25, 566);
-            Back.Name = "Back";
-            Back.Size = new Size(94, 92);
-            Back.TabIndex = 7;
-            Back.UseVisualStyleBackColor = false;
-            // 
             // Authorization
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
             ClientSize = new Size(1181, 670);
-            Controls.Add(Back);
             Controls.Add(unregistered);
             Controls.Add(passwordBox);
             Controls.Add(loginBox);
@@ -173,6 +156,5 @@
         private TextBox loginBox;
         private TextBox passwordBox;
         private Label unregistered;
-        private Button Back;
     }
 }
