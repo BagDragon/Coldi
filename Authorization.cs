@@ -22,7 +22,11 @@ namespace Coldi
 
         }
 
+        public string login;
+        public string password;
+
         StartForm startForm = new StartForm();
+        
 
         string vStrConnection = "Server= localhost; port= 5432; user id= postgres; password= 93538565; database= UserBD;";
 
@@ -40,11 +44,11 @@ namespace Coldi
             }
 
         }
-
+       
         private void Log_in_Click(object sender, EventArgs e)
         {
-            var login = loginBox.Text;
-            var password = passwordBox.Text;
+            login = loginBox.Text;
+            password = passwordBox.Text;
 
             int rowsCount = 0;
 
@@ -68,6 +72,10 @@ namespace Coldi
                 if (rowsCount > 0)
                 {
                     MessageBox.Show("there is an account");
+                    //ModeSelection modeSelection = new ModeSelection(login);
+                    //modeSelection.Show();
+
+                    
                 }
                 else
                 {

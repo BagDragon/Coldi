@@ -27,7 +27,7 @@ namespace Coldi
         private void StartBTN_Click(object sender, EventArgs e)
         {
             Authorization authorization = new Authorization();
-            authorization.Show();
+           authorization.Show();
 
             this.Hide();           
         }

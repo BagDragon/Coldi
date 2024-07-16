@@ -34,3 +34,4 @@ C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.Properties.R
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.csproj.Up2Date
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.Authorization.resources
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.ModeSelection.resources
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.RegistrationForm.resources
