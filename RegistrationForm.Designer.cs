@@ -36,9 +36,9 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            PasswordBox = new TextBox();
+            Repeat_PasswordBox = new TextBox();
+            emailBox = new TextBox();
             BackBTN = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)BackBTN).BeginInit();
             SuspendLayout();
@@ -128,36 +128,38 @@
             label5.TabIndex = 6;
             label5.Text = "E-mail";
             // 
-            // textBox1
+            // PasswordBox
             // 
-            textBox1.BackColor = Color.Silver;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            textBox1.ForeColor = SystemColors.WindowFrame;
-            textBox1.Location = new Point(471, 368);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(422, 71);
-            textBox1.TabIndex = 7;
+            PasswordBox.BackColor = Color.Silver;
+            PasswordBox.BorderStyle = BorderStyle.None;
+            PasswordBox.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            PasswordBox.ForeColor = Color.White;
+            PasswordBox.Location = new Point(471, 368);
+            PasswordBox.Name = "PasswordBox";
+            PasswordBox.Size = new Size(422, 71);
+            PasswordBox.TabIndex = 7;
             // 
-            // textBox2
+            // Repeat_PasswordBox
             // 
-            textBox2.BackColor = Color.Silver;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            textBox2.Location = new Point(471, 469);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(422, 71);
-            textBox2.TabIndex = 8;
+            Repeat_PasswordBox.BackColor = Color.Silver;
+            Repeat_PasswordBox.BorderStyle = BorderStyle.None;
+            Repeat_PasswordBox.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            Repeat_PasswordBox.ForeColor = Color.White;
+            Repeat_PasswordBox.Location = new Point(471, 469);
+            Repeat_PasswordBox.Name = "Repeat_PasswordBox";
+            Repeat_PasswordBox.Size = new Size(422, 71);
+            Repeat_PasswordBox.TabIndex = 8;
             // 
-            // textBox3
+            // emailBox
             // 
-            textBox3.BackColor = Color.Silver;
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            textBox3.Location = new Point(471, 267);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(422, 71);
-            textBox3.TabIndex = 9;
+            emailBox.BackColor = Color.Silver;
+            emailBox.BorderStyle = BorderStyle.None;
+            emailBox.Font = new Font("Segoe UI", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            emailBox.ForeColor = Color.White;
+            emailBox.Location = new Point(471, 267);
+            emailBox.Name = "emailBox";
+            emailBox.Size = new Size(422, 71);
+            emailBox.TabIndex = 9;
             // 
             // BackBTN
             // 
@@ -177,9 +179,9 @@
             BackColor = Color.Maroon;
             ClientSize = new Size(1181, 703);
             Controls.Add(BackBTN);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(emailBox);
+            Controls.Add(Repeat_PasswordBox);
+            Controls.Add(PasswordBox);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -204,9 +206,9 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox PasswordBox;
+        private TextBox Repeat_PasswordBox;
+        private TextBox emailBox;
         private PictureBox BackBTN;
     }
 }

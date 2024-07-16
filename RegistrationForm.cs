@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Npgsql;
+using NpgsqlTypes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,11 +20,64 @@ namespace Coldi
             InitializeComponent();
         }
 
-        
+        public string login;
+        public string email;
+        public string password;
+        public string Repeat_password;
+
+      
+
+        string vStrConnection = "Server= localhost; port= 5432; user id= postgres; password= 93538565; database= UserBD;";
+
+        NpgsqlCommand vCmd;
+        NpgsqlConnection vCon;
+
+        private void connection()
+        {
+            vCon = new NpgsqlConnection();
+            vCon.ConnectionString = vStrConnection;//connect 
+
+            if (vCon.State == ConnectionState.Closed)
+            {
+                vCon.Open();
+            }
+
+        }
+
 
         private void RegBTN_Click(object sender, EventArgs e)
         {
+            login = loginBox.Text;
+            email = emailBox.Text;
+            password = PasswordBox.Text;
+            Repeat_password = Repeat_PasswordBox.Text;
 
+            if(password == Repeat_password)
+            {
+                try
+                {
+                    connection();
+                    using (vCmd = new NpgsqlCommand("INSERT INTO users (login, password, email) VALUES (@login, @password, @email)", vCon))
+                    {
+                        // Use parameterized queries for security:
+                        vCmd.Parameters.Add("@login", NpgsqlDbType.Text).Value = login;
+                        vCmd.Parameters.Add("@password", NpgsqlDbType.Text).Value = Repeat_password; // Store hashed password
+                        vCmd.Parameters.Add("@email", NpgsqlDbType.Text).Value = email;
+
+                        vCmd.ExecuteNonQuery(); // Execute the INSERT query
+                        MessageBox.Show("User added successfully!");
+
+                        vCon.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No connection");
+
+                }
+            }
+
+            
         }
 
         private void RegistrationForm_Load(object sender, EventArgs e)
