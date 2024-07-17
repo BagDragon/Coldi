@@ -7,6 +7,9 @@
     <Compile Update="ModeSelection.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PlaysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>

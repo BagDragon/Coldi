@@ -49,7 +49,7 @@
             // 
             PlayBTN.BackColor = Color.DarkBlue;
             PlayBTN.FlatAppearance.MouseOverBackColor = Color.DarkBlue;
-            PlayBTN.FlatStyle = FlatStyle.Flat;
+            PlayBTN.FlatStyle = FlatStyle.Popup;
             PlayBTN.Font = new Font("Segoe UI Semilight", 50.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             PlayBTN.ForeColor = Color.White;
             PlayBTN.Location = new Point(306, 266);
@@ -75,7 +75,7 @@
             // ProgramsBTN
             // 
             ProgramsBTN.BackColor = Color.FromArgb(192, 64, 0);
-            ProgramsBTN.FlatStyle = FlatStyle.Flat;
+            ProgramsBTN.FlatStyle = FlatStyle.Popup;
             ProgramsBTN.Font = new Font("Segoe UI Semilight", 50.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             ProgramsBTN.ForeColor = Color.White;
             ProgramsBTN.Location = new Point(306, 430);

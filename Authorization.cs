@@ -72,8 +72,9 @@ namespace Coldi
                 if (rowsCount > 0)
                 {
                     MessageBox.Show("there is an account");
-                    //ModeSelection modeSelection = new ModeSelection(login);
-                    //modeSelection.Show();
+                        //connect form
+                   // ModeSelection modeSelection = new ModeSelection(login);
+                   // modeSelection.Show();
 
                     
                 }
