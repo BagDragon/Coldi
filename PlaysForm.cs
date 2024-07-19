@@ -16,6 +16,7 @@ namespace Coldi
         public PlaysForm()
         {
             InitializeComponent();
+
         }
 
         private void PlaysForm_Load(object sender, EventArgs e)
@@ -27,6 +28,51 @@ namespace Coldi
             {
                 e.Graphics.FillRectangle(gradientBrush, this.ClientRectangle);
             };
+        }
+
+        private void SnakeBTN_Click(object sender, EventArgs e)
+        {
+            if (SnakePanel.Visible == true)
+            {
+                SnakePanel.Visible = false;
+            }
+            else
+            {
+                SnakePanel.Visible = true;
+            }
+
+
+        }
+
+        private void SnakePlayPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SnakeViewCodeBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void TikTakToeBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TagBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CoupleBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SnakePanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
