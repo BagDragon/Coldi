@@ -19,5 +19,8 @@
     <Compile Update="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TicTacToeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

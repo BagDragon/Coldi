@@ -37,3 +37,4 @@ C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.ModeSelectio
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.RegistrationForm.resources
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.PlaysForm.resources
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.SnakeForm.resources
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.TicTacToeForm.resources
