@@ -38,3 +38,4 @@ C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.Registration
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.PlaysForm.resources
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.SnakeForm.resources
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.TicTacToeForm.resources
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.TagForm.resources
