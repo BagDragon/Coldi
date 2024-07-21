@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Coldi
+﻿namespace Coldi
 {
     public partial class FindCoupleForm : Form
     {
@@ -121,5 +111,9 @@ namespace Coldi
             Close();
         }
 
+        private void leavеBTN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

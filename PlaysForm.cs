@@ -41,13 +41,16 @@ namespace Coldi
                 SnakePanel.Visible = true;
             }
 
+            if (TicTacToePanel.Visible == true || TagPanel.Visible == true || FindCouplePanel.Visible == true) 
+            {
+                SnakePanel.Visible = false;
+                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
+            }
+
 
         }
 
-        private void SnakePlayPanel_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void SnakeViewCodeBTN_Click(object sender, EventArgs e)
         {
@@ -57,22 +60,60 @@ namespace Coldi
 
         private void TikTakToeBTN_Click(object sender, EventArgs e)
         {
+            if (TicTacToePanel.Visible == true)
+            {
+                TicTacToePanel.Visible = false;
+            }
+            else
+            {
+                TicTacToePanel.Visible = true;
+            }
 
+            if (SnakePanel.Visible == true || TagPanel.Visible == true || FindCouplePanel.Visible == true)
+            {
+                TicTacToePanel.Visible = false;
+                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
+            }
         }
 
         private void TagBTN_Click(object sender, EventArgs e)
         {
+            if (TagPanel.Visible == true)
+            {
+                TagPanel.Visible = false;
+            }
+            else
+            {
+                TagPanel.Visible = true;
+            }
 
+            if (SnakePanel.Visible == true || TicTacToePanel.Visible == true || FindCouplePanel.Visible == true)
+            {
+                TagPanel.Visible = false;
+                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
+            }
         }
 
         private void CoupleBTN_Click(object sender, EventArgs e)
         {
+            if (FindCouplePanel.Visible == true)
+            {
+                FindCouplePanel.Visible = false;
+            }
+            else
+            {
+                FindCouplePanel.Visible = true;
+            }
 
+            if (SnakePanel.Visible == true || TicTacToePanel.Visible == true || TagPanel.Visible == true)
+            {
+                TagPanel.Visible = false;
+                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
+            }
         }
 
-        private void SnakePanel_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
+
+       
     }
 }

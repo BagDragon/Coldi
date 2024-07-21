@@ -39,3 +39,4 @@ C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.PlaysForm.re
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.SnakeForm.resources
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.TicTacToeForm.resources
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.TagForm.resources
+C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.FindCoupleForm.resources

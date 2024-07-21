@@ -47,6 +47,7 @@
             label2 = new Label();
             label1 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            leavеBTN = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -298,12 +299,26 @@
             timer1.Interval = 750;
             timer1.Tick += timer1_Tick;
             // 
+            // leavеBTN
+            // 
+            leavеBTN.BackColor = Color.FromArgb(255, 128, 128);
+            leavеBTN.FlatStyle = FlatStyle.Popup;
+            leavеBTN.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            leavеBTN.Location = new Point(692, 12);
+            leavеBTN.Name = "leavеBTN";
+            leavеBTN.Size = new Size(87, 37);
+            leavеBTN.TabIndex = 1;
+            leavеBTN.Text = "Leave";
+            leavеBTN.UseVisualStyleBackColor = false;
+            leavеBTN.Click += leavеBTN_Click;
+            // 
             // FindCoupleForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(789, 516);
+            ClientSize = new Size(789, 481);
+            Controls.Add(leavеBTN);
             Controls.Add(tableLayoutPanel1);
             Name = "FindCoupleForm";
             Text = "FindCoupleForm";
@@ -332,5 +347,6 @@
         private Label label3;
         private Label label2;
         private System.Windows.Forms.Timer timer1;
+        private Button leavеBTN;
     }
 }

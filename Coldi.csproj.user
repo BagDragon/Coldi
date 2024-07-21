@@ -4,6 +4,9 @@
     <Compile Update="Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FindCoupleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ModeSelection.cs">
       <SubType>Form</SubType>
     </Compile>
