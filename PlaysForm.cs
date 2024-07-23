@@ -112,27 +112,28 @@ namespace Coldi
                     SnakePanel.Visible = false;
                     SnakeViewCodePanel.Visible = true;
                 }
+
+                if (TicTacToePanel.Visible == true)
+                {
+                   TicTacToePanel.Visible = false;
+                   TicTacToeViewCodePanel.Visible = true;
+                }
+
+                if (TagPanel.Visible == true)
+                {
+
+                }
+
+                if (FindCouplePanel.Visible == true)
+                {
+
+                }
             }
             else
             {
                 MainCodePanel.Visible = false;
             }
-
-
-            if (TicTacToePanel.Visible == true)
-            {
-
-            }
-
-            if (TagPanel.Visible == true)
-            {
-
-            }
-
-            if (FindCouplePanel.Visible == true)
-            {
-
-            }
+          
         }
 
         private void ClosePanelBTN_Click(object sender, EventArgs e)

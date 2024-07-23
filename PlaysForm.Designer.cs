@@ -69,6 +69,13 @@
             MainCodePanel = new Panel();
             ClosePanelBTN = new Button();
             SnakeViewCodePanel = new Panel();
+            TicTacToeViewCodePanel = new Panel();
+            pictureBox13 = new PictureBox();
+            label14 = new Label();
+            pictureBox12 = new PictureBox();
+            label12 = new Label();
+            listBox2 = new ListBox();
+            label13 = new Label();
             label10 = new Label();
             pictureBox11 = new PictureBox();
             listBox1 = new ListBox();
@@ -93,6 +100,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             MainCodePanel.SuspendLayout();
             SnakeViewCodePanel.SuspendLayout();
+            TicTacToeViewCodePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             SuspendLayout();
             // 
@@ -545,12 +555,14 @@
             // MainCodePanel
             // 
             MainCodePanel.BackColor = Color.FromArgb(30, 28, 28);
+            MainCodePanel.Controls.Add(TicTacToeViewCodePanel);
             MainCodePanel.Controls.Add(ClosePanelBTN);
             MainCodePanel.Controls.Add(SnakeViewCodePanel);
             MainCodePanel.Location = new Point(25, 27);
             MainCodePanel.Name = "MainCodePanel";
-            MainCodePanel.Size = new Size(1149, 656);
+            MainCodePanel.Size = new Size(1149, 670);
             MainCodePanel.TabIndex = 13;
+            MainCodePanel.Visible = false;
             // 
             // ClosePanelBTN
             // 
@@ -558,7 +570,7 @@
             ClosePanelBTN.FlatStyle = FlatStyle.Popup;
             ClosePanelBTN.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
             ClosePanelBTN.ForeColor = Color.White;
-            ClosePanelBTN.Location = new Point(1035, 613);
+            ClosePanelBTN.Location = new Point(1035, 615);
             ClosePanelBTN.Name = "ClosePanelBTN";
             ClosePanelBTN.Size = new Size(85, 35);
             ClosePanelBTN.TabIndex = 4;
@@ -572,10 +584,88 @@
             SnakeViewCodePanel.Controls.Add(pictureBox11);
             SnakeViewCodePanel.Controls.Add(listBox1);
             SnakeViewCodePanel.Controls.Add(label11);
-            SnakeViewCodePanel.Location = new Point(11, 12);
+            SnakeViewCodePanel.Location = new Point(11, 11);
             SnakeViewCodePanel.Name = "SnakeViewCodePanel";
             SnakeViewCodePanel.Size = new Size(1119, 595);
             SnakeViewCodePanel.TabIndex = 4;
+            SnakeViewCodePanel.Visible = false;
+            // 
+            // TicTacToeViewCodePanel
+            // 
+            TicTacToeViewCodePanel.Controls.Add(pictureBox13);
+            TicTacToeViewCodePanel.Controls.Add(label14);
+            TicTacToeViewCodePanel.Controls.Add(pictureBox12);
+            TicTacToeViewCodePanel.Controls.Add(label12);
+            TicTacToeViewCodePanel.Controls.Add(listBox2);
+            TicTacToeViewCodePanel.Controls.Add(label13);
+            TicTacToeViewCodePanel.Location = new Point(11, 14);
+            TicTacToeViewCodePanel.Name = "TicTacToeViewCodePanel";
+            TicTacToeViewCodePanel.Size = new Size(1124, 595);
+            TicTacToeViewCodePanel.TabIndex = 5;
+            TicTacToeViewCodePanel.Visible = false;
+            // 
+            // pictureBox13
+            // 
+            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
+            pictureBox13.Location = new Point(731, 511);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(376, 49);
+            pictureBox13.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox13.TabIndex = 5;
+            pictureBox13.TabStop = false;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(728, 419);
+            label14.Name = "label14";
+            label14.Size = new Size(386, 75);
+            label14.TabIndex = 4;
+            label14.Text = "In order for 9 buttons to work, they must \r\nbe highlighted and linked to a single \r\n\"Click\" event.\r\n";
+            // 
+            // pictureBox12
+            // 
+            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
+            pictureBox12.Location = new Point(782, 184);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(265, 218);
+            pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox12.TabIndex = 3;
+            pictureBox12.TabStop = false;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(397, 1);
+            label12.Name = "label12";
+            label12.Size = new Size(369, 65);
+            label12.TabIndex = 1;
+            label12.Text = "Code TicTacToe";
+            // 
+            // listBox2
+            // 
+            listBox2.FormattingEnabled = true;
+            listBox2.ItemHeight = 15;
+            listBox2.Items.AddRange(new object[] { "public partial class TicTacToeForm : Form", "{     ", "    public TicTacToeForm()", "    {", "        InitializeComponent();", "", "    }", "", "    int player = 0;", "", "", "    private void button1_Click(object sender, EventArgs e)", "    {", "        ((Button)sender).Text = player++ % 2 == 0 ? \"X\" : \"O\";", "", "        if (((Button)sender).Text == \"X\")", "        {", "            stroke.Text = \"Stroke: O\";", "        }", "        else ", "        {", "            stroke.Text = \"Stroke: X\";", "        }", "", "        checkWin();", "", "    }", "", "", "    private void checkWin()", "    {", "        Button[,] buttons = {", "            { button1, button2, button3 },", "            { button4, button5,button6},", "            { button7, button8, button9} };", "", "        if (buttons[0, 0].Text == buttons[0, 1].Text && buttons[0, 1].Text == buttons[0, 2].Text)", "        {", "", "            if (buttons[0, 0].Text != \"\")", "            {", "                MessageBox.Show(\"Вы победили!\");", "                return;", "            }", "        }", "        if (buttons[1, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[1, 2].Text)", "        {", "            if (buttons[1, 0].Text != \"\")", "                MessageBox.Show(\"Вы победили!\");", "        }", "        if (buttons[2, 0].Text == buttons[2, 1].Text && buttons[2, 1].Text == buttons[2, 2].Text)", "        {", "            if (buttons[2, 0].Text != \"\")", "                MessageBox.Show(\"Вы победили!\");", "        }", "        if (buttons[0, 0].Text == buttons[1, 0].Text && buttons[1, 0].Text == buttons[2, 0].Text)", "        {", "            if (buttons[0, 0].Text != \"\")", "                MessageBox.Show(\"Вы победили!\");", "        }", "        if (buttons[0, 1].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 1].Text)", "        {", "            if (buttons[0, 1].Text != \"\")", "                MessageBox.Show(\"Вы победили!\");", "        }", "        if (buttons[0, 2].Text == buttons[1, 2].Text && buttons[1, 2].Text == buttons[2, 2].Text)", "        {", "            if (buttons[0, 2].Text != \"\")", "                MessageBox.Show(\"Вы победили!\");", "        }", "        if (buttons[0, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 2].Text)", "        {", "            if (buttons[0, 0].Text != \"\")", "                MessageBox.Show(\"Вы победили!\");", "        }", "        if (buttons[2, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[0, 2].Text)", "        {", "            if (buttons[2, 0].Text != \"\")", "                MessageBox.Show(\"Вы победили!\");", "        }", "    }", "", "    private void reset_Click(object sender, EventArgs e)", "    {", "        Button[,] buttons = {", "            { button1, button2, button3 },", "            { button4, button5,button6},", "            { button7, button8, button9} };", "", "        for (int i = 0; i < buttons.GetLength(0); i++)", "        {", "            for (int j = 0; j < buttons.GetLength(1); j++)", "            {", "                buttons[j, i].Text = \"\";", "            }", "        }", "    }", "", "}" });
+            listBox2.Location = new Point(6, 68);
+            listBox2.Name = "listBox2";
+            listBox2.Size = new Size(710, 529);
+            listBox2.TabIndex = 0;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label13.ForeColor = Color.White;
+            label13.Location = new Point(723, 66);
+            label13.Name = "label13";
+            label13.Size = new Size(349, 100);
+            label13.TabIndex = 2;
+            label13.Text = "The composition of the form to start \r\nthe development: \r\n                              •buttons - 10 pieces. \r\n                              •label- 1 piece.";
             // 
             // label10
             // 
@@ -667,6 +757,10 @@
             MainCodePanel.ResumeLayout(false);
             SnakeViewCodePanel.ResumeLayout(false);
             SnakeViewCodePanel.PerformLayout();
+            TicTacToeViewCodePanel.ResumeLayout(false);
+            TicTacToeViewCodePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -718,5 +812,12 @@
         private PictureBox pictureBox11;
         private Panel SnakeViewCodePanel;
         private Button ClosePanelBTN;
+        private Panel TicTacToeViewCodePanel;
+        private Label label12;
+        private ListBox listBox2;
+        private Label label13;
+        private PictureBox pictureBox12;
+        private Label label14;
+        private PictureBox pictureBox13;
     }
 }
