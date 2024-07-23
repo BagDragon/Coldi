@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Drawing.Drawing2D;
 
 namespace Coldi
 {
@@ -41,7 +32,7 @@ namespace Coldi
                 SnakePanel.Visible = true;
             }
 
-            if (TicTacToePanel.Visible == true || TagPanel.Visible == true || FindCouplePanel.Visible == true) 
+            if (TicTacToePanel.Visible == true || TagPanel.Visible == true || FindCouplePanel.Visible == true)
             {
                 SnakePanel.Visible = false;
                 MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
@@ -50,12 +41,9 @@ namespace Coldi
 
         }
 
-      
 
-        private void SnakeViewCodeBTN_Click(object sender, EventArgs e)
-        {
 
-        }
+
 
 
         private void TikTakToeBTN_Click(object sender, EventArgs e)
@@ -112,8 +100,44 @@ namespace Coldi
             }
         }
 
+        private void ViewCodeBTN_Click(object sender, EventArgs e)
+        {
+
+            if (MainCodePanel.Visible == false)
+            {
+                MainCodePanel.Visible = true;
+
+                if (SnakePanel.Visible = true)
+                {
+                    SnakePanel.Visible = false;
+                    SnakeViewCodePanel.Visible = true;
+                }
+            }
+            else
+            {
+                MainCodePanel.Visible = false;
+            }
 
 
-       
+            if (TicTacToePanel.Visible == true)
+            {
+
+            }
+
+            if (TagPanel.Visible == true)
+            {
+
+            }
+
+            if (FindCouplePanel.Visible == true)
+            {
+
+            }
+        }
+
+        private void ClosePanelBTN_Click(object sender, EventArgs e)
+        {
+            MainCodePanel.Visible = false;
+        }
     }
 }
