@@ -41,7 +41,7 @@
             SnakePanel = new Panel();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
-            SnakePlayPanel = new Button();
+            PlayPanel = new Button();
             label3 = new Label();
             ViewCodeBTN = new Button();
             label2 = new Label();
@@ -67,8 +67,22 @@
             button6 = new Button();
             label9 = new Label();
             MainCodePanel = new Panel();
+            FindCoupleViewCodePanel = new Panel();
+            label21 = new Label();
+            pictureBox17 = new PictureBox();
+            label18 = new Label();
+            pictureBox16 = new PictureBox();
+            label19 = new Label();
+            listBox4 = new ListBox();
+            label20 = new Label();
+            TagViewCodePanel = new Panel();
+            pictureBox14 = new PictureBox();
+            label15 = new Label();
+            pictureBox15 = new PictureBox();
+            label16 = new Label();
+            listBox3 = new ListBox();
+            label17 = new Label();
             ClosePanelBTN = new Button();
-            SnakeViewCodePanel = new Panel();
             TicTacToeViewCodePanel = new Panel();
             pictureBox13 = new PictureBox();
             label14 = new Label();
@@ -76,6 +90,7 @@
             label12 = new Label();
             listBox2 = new ListBox();
             label13 = new Label();
+            SnakeViewCodePanel = new Panel();
             label10 = new Label();
             pictureBox11 = new PictureBox();
             listBox1 = new ListBox();
@@ -99,10 +114,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             MainCodePanel.SuspendLayout();
-            SnakeViewCodePanel.SuspendLayout();
+            FindCoupleViewCodePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
+            TagViewCodePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             TicTacToeViewCodePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            SnakeViewCodePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             SuspendLayout();
             // 
@@ -217,7 +238,7 @@
             SnakePanel.BackColor = Color.FromArgb(30, 28, 28);
             SnakePanel.Controls.Add(pictureBox4);
             SnakePanel.Controls.Add(pictureBox3);
-            SnakePanel.Controls.Add(SnakePlayPanel);
+            SnakePanel.Controls.Add(PlayPanel);
             SnakePanel.Controls.Add(label3);
             SnakePanel.Controls.Add(ViewCodeBTN);
             SnakePanel.Controls.Add(label2);
@@ -248,18 +269,19 @@
             pictureBox3.TabIndex = 4;
             pictureBox3.TabStop = false;
             // 
-            // SnakePlayPanel
+            // PlayPanel
             // 
-            SnakePlayPanel.AutoSize = true;
-            SnakePlayPanel.BackColor = Color.FromArgb(92, 92, 92);
-            SnakePlayPanel.FlatStyle = FlatStyle.Popup;
-            SnakePlayPanel.Font = new Font("Segoe UI", 30F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            SnakePlayPanel.Location = new Point(306, 270);
-            SnakePlayPanel.Name = "SnakePlayPanel";
-            SnakePlayPanel.Size = new Size(207, 64);
-            SnakePlayPanel.TabIndex = 3;
-            SnakePlayPanel.Text = "Play";
-            SnakePlayPanel.UseVisualStyleBackColor = false;
+            PlayPanel.AutoSize = true;
+            PlayPanel.BackColor = Color.FromArgb(92, 92, 92);
+            PlayPanel.FlatStyle = FlatStyle.Popup;
+            PlayPanel.Font = new Font("Segoe UI", 30F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            PlayPanel.Location = new Point(306, 270);
+            PlayPanel.Name = "PlayPanel";
+            PlayPanel.Size = new Size(207, 64);
+            PlayPanel.TabIndex = 3;
+            PlayPanel.Text = "Play";
+            PlayPanel.UseVisualStyleBackColor = false;
+            PlayPanel.Click += PlayPanel_Click;
             // 
             // label3
             // 
@@ -345,6 +367,7 @@
             button1.TabIndex = 3;
             button1.Text = "Play";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += PlayPanel_Click;
             // 
             // label4
             // 
@@ -430,6 +453,7 @@
             button3.TabIndex = 3;
             button3.Text = "Play";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += PlayPanel_Click;
             // 
             // label6
             // 
@@ -515,6 +539,7 @@
             button5.TabIndex = 3;
             button5.Text = "Play";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += PlayPanel_Click;
             // 
             // label8
             // 
@@ -555,14 +580,181 @@
             // MainCodePanel
             // 
             MainCodePanel.BackColor = Color.FromArgb(30, 28, 28);
-            MainCodePanel.Controls.Add(TicTacToeViewCodePanel);
+            MainCodePanel.Controls.Add(FindCoupleViewCodePanel);
+            MainCodePanel.Controls.Add(TagViewCodePanel);
             MainCodePanel.Controls.Add(ClosePanelBTN);
+            MainCodePanel.Controls.Add(TicTacToeViewCodePanel);
             MainCodePanel.Controls.Add(SnakeViewCodePanel);
-            MainCodePanel.Location = new Point(25, 27);
+            MainCodePanel.Location = new Point(25, 15);
             MainCodePanel.Name = "MainCodePanel";
             MainCodePanel.Size = new Size(1149, 670);
             MainCodePanel.TabIndex = 13;
             MainCodePanel.Visible = false;
+            // 
+            // FindCoupleViewCodePanel
+            // 
+            FindCoupleViewCodePanel.Controls.Add(label21);
+            FindCoupleViewCodePanel.Controls.Add(pictureBox17);
+            FindCoupleViewCodePanel.Controls.Add(label18);
+            FindCoupleViewCodePanel.Controls.Add(pictureBox16);
+            FindCoupleViewCodePanel.Controls.Add(label19);
+            FindCoupleViewCodePanel.Controls.Add(listBox4);
+            FindCoupleViewCodePanel.Controls.Add(label20);
+            FindCoupleViewCodePanel.Location = new Point(9, 11);
+            FindCoupleViewCodePanel.Name = "FindCoupleViewCodePanel";
+            FindCoupleViewCodePanel.Size = new Size(1124, 595);
+            FindCoupleViewCodePanel.TabIndex = 7;
+            FindCoupleViewCodePanel.Visible = false;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label21.ForeColor = Color.White;
+            label21.Location = new Point(735, 284);
+            label21.Name = "label21";
+            label21.Size = new Size(70, 30);
+            label21.TabIndex = 6;
+            label21.Text = "Form:";
+            // 
+            // pictureBox17
+            // 
+            pictureBox17.Image = (Image)resources.GetObject("pictureBox17.Image");
+            pictureBox17.Location = new Point(735, 549);
+            pictureBox17.Name = "pictureBox17";
+            pictureBox17.Size = new Size(351, 31);
+            pictureBox17.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox17.TabIndex = 5;
+            pictureBox17.TabStop = false;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label18.ForeColor = Color.White;
+            label18.Location = new Point(733, 518);
+            label18.Name = "label18";
+            label18.Size = new Size(109, 25);
+            label18.TabIndex = 4;
+            label18.Text = "Text labels:";
+            // 
+            // pictureBox16
+            // 
+            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
+            pictureBox16.Location = new Point(813, 283);
+            pictureBox16.Name = "pictureBox16";
+            pictureBox16.Size = new Size(261, 217);
+            pictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox16.TabIndex = 3;
+            pictureBox16.TabStop = false;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label19.ForeColor = Color.White;
+            label19.Location = new Point(373, 3);
+            label19.Name = "label19";
+            label19.Size = new Size(464, 65);
+            label19.TabIndex = 1;
+            label19.Text = "Code Find a Couple";
+            // 
+            // listBox4
+            // 
+            listBox4.FormattingEnabled = true;
+            listBox4.ItemHeight = 15;
+            listBox4.Items.AddRange(new object[] { "public partial class FindCoupleForm : Form", "{", "    public FindCoupleForm()", "    {", "        InitializeComponent();", "        AssignIconsToSquares();", "    }", "", "    Label firstClicked = null;", "", "", "    Label secondClicked = null;", "", "", "", "    Random random = new Random();", "", "    List<string> icons = new List<string>()", "{", "    \"!\",\"!\",\"N\",\"N\",\",\",\",\",\"k\",\"k\",", "    \"b\",\"b\",\"v\",\"v\",\"w\",\"w\",\"z\",\"z\"", "};", "", "    private void AssignIconsToSquares()", "    {", "", "        foreach (Control control in tableLayoutPanel1.Controls)", "        {", "            Label iconLabel = control as Label;", "            if (iconLabel != null)", "            {", "                int randomNumber = random.Next(icons.Count);", "                iconLabel.Text = icons[randomNumber];", "                iconLabel.ForeColor = iconLabel.BackColor;", "                icons.RemoveAt(randomNumber);", "", "            }", "        }", "    }", "", "    private void label1_Click(object sender, EventArgs e)", "    {", "        if (timer1.Enabled == true)", "            return;", "", "        Label clickedLabel = sender as Label;", "", "        if (clickedLabel != null)", "        {", "", "            if (clickedLabel.ForeColor == Color.Black)", "                return;", "", "", "            if (firstClicked == null)", "            {", "                firstClicked = clickedLabel;", "                firstClicked.ForeColor = Color.Black;", "                return;", "            }", "", "", "            secondClicked = clickedLabel;", "            secondClicked.ForeColor = Color.Black;", "", "            CheckForWinner();", "", "            if (firstClicked.Text == secondClicked.Text)", "            {", "                firstClicked = null;", "                secondClicked = null;", "                return;", "            }", "", "", "            timer1.Start();", "        }", "    }", "", "    private void timer1_Tick(object sender, EventArgs e)", "    {", "        timer1.Stop();", "", "", "        firstClicked.ForeColor = firstClicked.BackColor;", "        secondClicked.ForeColor = secondClicked.BackColor;", "", "", "        firstClicked = null;", "        secondClicked = null;", "    }", "", "    private void CheckForWinner()", "    {", "", "        foreach (Control control in tableLayoutPanel1.Controls)", "        {", "            Label iconLabel = control as Label;", "", "            if (iconLabel != null)", "            {", "                if (iconLabel.ForeColor == iconLabel.BackColor)", "                    return;", "            }", "        }", "", "", "        MessageBox.Show(\"You matched all the icons!\", \"Congratulations\");", "        Close();", "    }", "}" });
+            listBox4.Location = new Point(6, 68);
+            listBox4.Name = "listBox4";
+            listBox4.Size = new Size(710, 529);
+            listBox4.TabIndex = 0;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label20.ForeColor = Color.White;
+            label20.Location = new Point(723, 66);
+            label20.Name = "label20";
+            label20.Size = new Size(371, 200);
+            label20.TabIndex = 2;
+            label20.Text = resources.GetString("label20.Text");
+            // 
+            // TagViewCodePanel
+            // 
+            TagViewCodePanel.Controls.Add(pictureBox14);
+            TagViewCodePanel.Controls.Add(label15);
+            TagViewCodePanel.Controls.Add(pictureBox15);
+            TagViewCodePanel.Controls.Add(label16);
+            TagViewCodePanel.Controls.Add(listBox3);
+            TagViewCodePanel.Controls.Add(label17);
+            TagViewCodePanel.Location = new Point(11, 12);
+            TagViewCodePanel.Name = "TagViewCodePanel";
+            TagViewCodePanel.Size = new Size(1124, 595);
+            TagViewCodePanel.TabIndex = 6;
+            TagViewCodePanel.Visible = false;
+            // 
+            // pictureBox14
+            // 
+            pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
+            pictureBox14.Location = new Point(731, 511);
+            pictureBox14.Name = "pictureBox14";
+            pictureBox14.Size = new Size(376, 49);
+            pictureBox14.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox14.TabIndex = 5;
+            pictureBox14.TabStop = false;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(728, 419);
+            label15.Name = "label15";
+            label15.Size = new Size(395, 100);
+            label15.TabIndex = 4;
+            label15.Text = "In order for all buttons to work, they must \r\nbe highlighted and linked to a single \r\n\"Click\" event called \"button\".\r\n\r\n";
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
+            pictureBox15.Location = new Point(787, 161);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(265, 247);
+            pictureBox15.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox15.TabIndex = 3;
+            pictureBox15.TabStop = false;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(495, 1);
+            label16.Name = "label16";
+            label16.Size = new Size(236, 65);
+            label16.TabIndex = 1;
+            label16.Text = "Code Tag";
+            // 
+            // listBox3
+            // 
+            listBox3.FormattingEnabled = true;
+            listBox3.ItemHeight = 15;
+            listBox3.Items.AddRange(new object[] { "public partial class TagForm : Form", "{", "    Button[,] buttons;", "    List<Image> images;", "", "    public TagForm()", "    {", "        InitializeComponent();", "        ", "    }", "", "    private void TagForm_Load(object sender, EventArgs e)", "    {", "        FillTheAraayOfButtons();", "", "        images = new List<Image>();", "", "        for (int i = 1; i < 9; i++)", "        {", "            ", "            images.Add(Image.FromFile(@\"C:\\Users\\пк\\Desktop\\Projects\\Coldi\\res\\img\\TAGimages\\\" + i + \".jpg\"));", "        }", "        SetUpGame();", "    }", "", "    void SetUpGame()", "    {", "        Random rng = new Random();", "        List<Image> imagesCopy = new List<Image>(images); // Создаем копию списка images", "", "        for (int x = 0; x < 3; x++)", "        {", "            for (int y = 0; y < 3; y++)", "            {", "                if (imagesCopy.Count > 0)", "                {", "                    int randomImageIndex = rng.Next(0, imagesCopy.Count);", "                    buttons[x, y].Image = imagesCopy[randomImageIndex];", "                    imagesCopy.RemoveAt(randomImageIndex);", "                }", "            }", "        }", "    }", "", "    void FillTheAraayOfButtons()", "    {", "        buttons = new Button[3, 3];", "        buttons[0, 0] = button1;", "        buttons[1, 0] = button2;", "        buttons[2, 0] = button3;", "        buttons[0, 1] = button4;", "        buttons[1, 1] = button5;", "        buttons[2, 1] = button6;", "        buttons[0, 2] = button7;", "        buttons[1, 2] = button8;", "        buttons[2, 2] = button9;", "    }", "", "    private void button_Click(object sender, EventArgs e)", "    {", "", "        Button button = (Button)sender;", "        if (button.Image != null)", "        {", "", "            for (int x = 0; x < 3; x++)", "            {", "                for (int y = 0; y < 3; y++)", "                {", "                    if (buttons[x, y] == button)", "                    {", "                        CheckNeighbours(x, y);", "                    }", "                }", "            }", "        }", "    }", "", "", "    void CheckNeighbours(int xB, int yB)", "    {", "        for (int x = xB - 1; x <= xB + 1; x++)", "        {", "            for (int y = yB - 1; y <= yB + 1; y++)", "            {", "                if (x >= 0 && x < 3 && y >= 0 && y < 3 && (xB == x || yB == y))", "                {", "                    if (buttons[x, y].Image == null)", "                    {", "                        buttons[x, y].Image = buttons[xB, yB].Image;", "                        buttons[xB, yB].Image = null;", "                    }", "                }", "            }", "        }", "    }", "}" });
+            listBox3.Location = new Point(6, 68);
+            listBox3.Name = "listBox3";
+            listBox3.Size = new Size(710, 529);
+            listBox3.TabIndex = 0;
+            // 
+            // label17
+            // 
+            label17.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label17.ForeColor = Color.White;
+            label17.Location = new Point(723, 66);
+            label17.Name = "label17";
+            label17.Size = new Size(349, 100);
+            label17.TabIndex = 2;
+            label17.Text = "The composition of the form to start \r\nthe development: \r\n                              •buttons - 9 pieces.                              ";
             // 
             // ClosePanelBTN
             // 
@@ -578,18 +770,6 @@
             ClosePanelBTN.UseVisualStyleBackColor = false;
             ClosePanelBTN.Click += ClosePanelBTN_Click;
             // 
-            // SnakeViewCodePanel
-            // 
-            SnakeViewCodePanel.Controls.Add(label10);
-            SnakeViewCodePanel.Controls.Add(pictureBox11);
-            SnakeViewCodePanel.Controls.Add(listBox1);
-            SnakeViewCodePanel.Controls.Add(label11);
-            SnakeViewCodePanel.Location = new Point(11, 11);
-            SnakeViewCodePanel.Name = "SnakeViewCodePanel";
-            SnakeViewCodePanel.Size = new Size(1119, 595);
-            SnakeViewCodePanel.TabIndex = 4;
-            SnakeViewCodePanel.Visible = false;
-            // 
             // TicTacToeViewCodePanel
             // 
             TicTacToeViewCodePanel.Controls.Add(pictureBox13);
@@ -598,7 +778,7 @@
             TicTacToeViewCodePanel.Controls.Add(label12);
             TicTacToeViewCodePanel.Controls.Add(listBox2);
             TicTacToeViewCodePanel.Controls.Add(label13);
-            TicTacToeViewCodePanel.Location = new Point(11, 14);
+            TicTacToeViewCodePanel.Location = new Point(8, 11);
             TicTacToeViewCodePanel.Name = "TicTacToeViewCodePanel";
             TicTacToeViewCodePanel.Size = new Size(1124, 595);
             TicTacToeViewCodePanel.TabIndex = 5;
@@ -667,6 +847,18 @@
             label13.TabIndex = 2;
             label13.Text = "The composition of the form to start \r\nthe development: \r\n                              •buttons - 10 pieces. \r\n                              •label- 1 piece.";
             // 
+            // SnakeViewCodePanel
+            // 
+            SnakeViewCodePanel.Controls.Add(label10);
+            SnakeViewCodePanel.Controls.Add(pictureBox11);
+            SnakeViewCodePanel.Controls.Add(listBox1);
+            SnakeViewCodePanel.Controls.Add(label11);
+            SnakeViewCodePanel.Location = new Point(11, 11);
+            SnakeViewCodePanel.Name = "SnakeViewCodePanel";
+            SnakeViewCodePanel.Size = new Size(1119, 595);
+            SnakeViewCodePanel.TabIndex = 4;
+            SnakeViewCodePanel.Visible = false;
+            // 
             // label10
             // 
             label10.AutoSize = true;
@@ -681,7 +873,7 @@
             // pictureBox11
             // 
             pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(720, 257);
+            pictureBox11.Location = new Point(722, 257);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new Size(389, 317);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -693,7 +885,7 @@
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
             listBox1.Items.AddRange(new object[] { "public partial class SnakeForm : Form", "{", "    private int rI, rJ;", "", "    private PictureBox fruit;", "    private PictureBox[] snake = new PictureBox[400];", "    private int dirX,dirY;", "", "    private Label labelScore;", "", "    private int _width = 900;", "    private int _height = 800;", "", "    private int _sizeOfSides = 40;", "", "    private int score = 0;", "", "    public SnakeForm()", "    {", "        InitializeComponent();", "        this.Width = _width;", "        this.Height = _height;", "", "        dirX = 1; dirY = 0;", "", "        labelScore = new Label();", "        labelScore.Text = \"Score: 0\";", "        labelScore.Location = new Point(810,10);", "        this.Controls.Add(labelScore);", "", "        snake[0] = new PictureBox();", "        snake[0].Location = new Point(201,201);", "        snake[0].Size = new Size(_sizeOfSides - 1, _sizeOfSides - 1);", "        snake[0].BackColor = Color.Aqua;", "        this.Controls.Add(snake[0]);", "", "        fruit= new PictureBox();", "        fruit.BackColor = Color.Red;", "        fruit.Size = new Size(_sizeOfSides, _sizeOfSides);", "", "        _generateMap();", "        _generateFruit();", "", "        timer.Tick += new EventHandler(_update);", "        timer.Interval = 500;", "        timer.Start();", "", "        this.KeyDown += new KeyEventHandler(OKP);", "    }", "", "    private void _generateFruit()", "    {", "       Random rnd = new Random();", "        rI = rnd.Next(0, _height - _sizeOfSides);", "        int tempI = rI % _sizeOfSides;", "        rI -= tempI; ", "        ", "        rJ = rnd.Next(0, _height - _sizeOfSides);", "        int tempJ = rJ % _sizeOfSides;", "        rJ -= tempJ;", "", "        rI++;", "        rJ++;", "", "        fruit.Location = new Point(rI, rJ);", "        this.Controls.Add(fruit);", "", "        ", "    }", "", "    private void _checkBorders()", "    {", "        if (snake[0].Location.X < 0)", "        {", "            for (int _i = 1; _i <= score; _i++)", "            {", "                this.Controls.Remove(snake[_i]);", "            }", "            score = 0;", "            labelScore.Text = \"Score: \" + score;", "            dirX = 1;", "        }", "        if (snake[0].Location.X > _height)", "        {", "            for (int _i = 1; _i <= score; _i++)", "            {", "                this.Controls.Remove(snake[_i]);", "            }", "            score = 0;", "            labelScore.Text = \"Score: \" + score;", "            dirX = -1;", "        }", "        if (snake[0].Location.Y < 0)", "        {", "            for (int _i = 1; _i <= score; _i++)", "            {", "                this.Controls.Remove(snake[_i]);", "            }", "            score = 0;", "            labelScore.Text = \"Score: \" + score;", "            dirY = 1;", "        }", "        if (snake[0].Location.Y > _height)", "        {", "            for (int _i = 1; _i <= score; _i++)", "            {", "                this.Controls.Remove(snake[_i]);", "            }", "            score = 0;", "            labelScore.Text = \"Score: \" + score;", "            dirY = -1;", "        }", "    }", "", "    private void _eatItself()", "    {", "        for (int _i = 1; _i < score; _i++)", "        {", "            if (snake[0].Location == snake[_i].Location)", "            {", "                for (int _j = _i; _j <= score; _j++)", "                    this.Controls.Remove(snake[_j]);", "                score = score - (score - _i + 1);", "                labelScore.Text = \"Score: \" + score;", "            }", "        }", "    }", "", "", "", "", "", "    private void _eatFruit()", "    {", "        if (snake[0].Location.X == rI && snake[0].Location.Y == rJ) ", "        {", "        labelScore.Text = \"Score: \"+ ++score;", "            snake[score] = new PictureBox();", "            snake[score].Location = new Point(snake[score - 1].Location.X - 40 * dirX, snake[score- 1].Location.Y - 40 * dirY);", "            snake[score].Size = new Size (_sizeOfSides - 1, _sizeOfSides - 1);", "            snake[score].BackColor = Color.Green;", "            this.Controls.Add(snake[score]);", "            _generateFruit();", "", "        }", "    }", "", "    private void _generateMap()", "    {", "        for (int i = 0; i < _width / _sizeOfSides; i++)", "        {", "           PictureBox pic = new PictureBox();", "           pic.BackColor = Color.Black;", "           pic.Location = new Point(0, _sizeOfSides * i);", "            pic.Size = new Size(_width - 100, 1);", "            this.Controls.Add(pic);", "        }", "        for (int i = 0; i <= _height / _sizeOfSides; i++)", "        {", "           PictureBox pic = new PictureBox();", "           pic.BackColor = Color.Black;", "           pic.Location = new Point(_sizeOfSides * i, 0);", "            pic.Size = new Size(1,_width);", "            this.Controls.Add(pic);", "        }", "    }", "", "    private void _moveSnake()", "    {", "        for (int i = score; i >= 1; i--)", "        {", "            snake[i].Location = snake[i - 1].Location;", "        }", "        snake[0].Location = new Point(snake[0].Location.X + dirX * (_sizeOfSides), snake[0].Location.Y + dirY * (_sizeOfSides));", "        _eatItself();", "    ", "", "    }", "", "    private void _update(Object myObject, EventArgs e)", "    {", "        _eatFruit();", "        _moveSnake();", "        _checkBorders();", "    }", "", "    private void OKP(object sender, KeyEventArgs e) ", "    {", "        switch (e.KeyCode.ToString())", "        {", "            case \"Right\":", "                dirX = 1;", "                dirY = 0;", "                break;", "            case \"Left\":", "                dirX = -1;", "                dirY = 0;", "                break;", "            case \"Up\":", "                dirY = -1;", "                dirX = 0;", "                break;", "            case \"Down\":", "                dirY = 1;", "                dirX = 0;", "                break;", "            default:", "                break;", "        }", "    }", "", "    ", "", "}" });
-            listBox1.Location = new Point(0, 66);
+            listBox1.Location = new Point(6, 66);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(710, 529);
             listBox1.TabIndex = 0;
@@ -755,12 +947,20 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             MainCodePanel.ResumeLayout(false);
-            SnakeViewCodePanel.ResumeLayout(false);
-            SnakeViewCodePanel.PerformLayout();
+            FindCoupleViewCodePanel.ResumeLayout(false);
+            FindCoupleViewCodePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
+            TagViewCodePanel.ResumeLayout(false);
+            TagViewCodePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             TicTacToeViewCodePanel.ResumeLayout(false);
             TicTacToeViewCodePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            SnakeViewCodePanel.ResumeLayout(false);
+            SnakeViewCodePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -783,7 +983,7 @@
         private Button ViewCodeBTN;
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
-        private Button SnakePlayPanel;
+        private Button PlayPanel;
         private Panel TicTacToePanel;
         private Button button1;
         private Label label4;
@@ -819,5 +1019,20 @@
         private PictureBox pictureBox12;
         private Label label14;
         private PictureBox pictureBox13;
+        private Panel TagViewCodePanel;
+        private PictureBox pictureBox14;
+        private Label label15;
+        private PictureBox pictureBox15;
+        private Label label16;
+        private ListBox listBox3;
+        private Label label17;
+        private Panel FindCoupleViewCodePanel;
+        private Label label19;
+        private ListBox listBox4;
+        private Label label20;
+        private PictureBox pictureBox16;
+        private Label label21;
+        private PictureBox pictureBox17;
+        private Label label18;
     }
 }
