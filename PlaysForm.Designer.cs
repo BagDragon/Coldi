@@ -165,11 +165,11 @@
             // 
             UserName.AutoSize = true;
             UserName.BackColor = Color.Transparent;
-            UserName.Font = new Font("Segoe UI Semilight", 32.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            UserName.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             UserName.ForeColor = Color.White;
-            UserName.Location = new Point(1004, 27);
+            UserName.Location = new Point(1065, 11);
             UserName.Name = "UserName";
-            UserName.Size = new Size(116, 59);
+            UserName.Size = new Size(57, 30);
             UserName.TabIndex = 3;
             UserName.Text = "Uber";
             // 
@@ -585,6 +585,7 @@
             MainCodePanel.Controls.Add(ClosePanelBTN);
             MainCodePanel.Controls.Add(TicTacToeViewCodePanel);
             MainCodePanel.Controls.Add(SnakeViewCodePanel);
+            MainCodePanel.Controls.Add(UserName);
             MainCodePanel.Location = new Point(25, 15);
             MainCodePanel.Name = "MainCodePanel";
             MainCodePanel.Size = new Size(1149, 670);
@@ -916,7 +917,6 @@
             Controls.Add(TikTakToeBTN);
             Controls.Add(SnakeBTN);
             Controls.Add(Choose);
-            Controls.Add(UserName);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
@@ -947,6 +947,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             MainCodePanel.ResumeLayout(false);
+            MainCodePanel.PerformLayout();
             FindCoupleViewCodePanel.ResumeLayout(false);
             FindCoupleViewCodePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
