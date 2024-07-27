@@ -40,7 +40,7 @@ namespace Coldi
             if (TicTacToePanel.Visible == true || TagPanel.Visible == true || FindCouplePanel.Visible == true)
             {
                 SnakePanel.Visible = false;
-                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
+                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the program icon");
             }
 
 

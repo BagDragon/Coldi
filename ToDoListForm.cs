@@ -97,39 +97,51 @@ namespace Coldi
 
         private void СhangeBTN_Click(object sender, EventArgs e)
         {
+            
             ChangeBox.Visible = true;
 
+            bool doblecl= false;
 
-
-            if (ChangeBox.Text != "")
+            if (doblecl == false)
             {
-                task = ChangeBox.Text;
-                SelectTask = tasksListBox.SelectedItem.ToString();
-                try
+                if (ChangeBox.Text != "")
                 {
-                    connection();
-                    using (vCmd = new NpgsqlCommand("Update tasktodo set task = @task Where task = @seltask", vCon))
+                    task = ChangeBox.Text;
+                    SelectTask = tasksListBox.SelectedItem.ToString();
+                    try
                     {
-                        vCmd.Parameters.Add("@task", NpgsqlDbType.Text).Value = task;
-                        vCmd.Parameters.Add("@seltask", NpgsqlDbType.Text).Value = SelectTask;
+                        connection();
+                        using (vCmd = new NpgsqlCommand("Update tasktodo set task = @task Where task = @seltask", vCon))
+                        {
+                            vCmd.Parameters.Add("@task", NpgsqlDbType.Text).Value = task;
+                            vCmd.Parameters.Add("@seltask", NpgsqlDbType.Text).Value = SelectTask;
 
-                        vCmd.ExecuteNonQuery(); // Execute the INSERT query
+                            vCmd.ExecuteNonQuery(); // Execute the INSERT query
 
-                        vCon.Close();
+                            vCon.Close();
+
+                        }
 
                     }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    ChangeBox.Visible = false;
+                    executionListBox.Items.Clear();
+                    EXElistLoad();
+                    tasksListBox.Items.Clear();
+                    listLoad();
+                   
 
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-                executionListBox.Items.Clear();
-                EXElistLoad();
-                tasksListBox.Items.Clear();
-                listLoad();
+                doblecl = true;
             }
+            if (doblecl)
+            {
+                ChangeBox.Text = "";
+            }
+               
         }
 
 
