@@ -29,7 +29,9 @@ namespace Coldi
             };
         }
 
-
+        CalculatorForm calculatorForm = new CalculatorForm();
+        AsagoForm asagoForm = new AsagoForm();
+        ToDoListForm toDoListForm = new ToDoListForm();
 
 
         private void ToDoListBTN_Click(object sender, EventArgs e)
@@ -38,14 +40,14 @@ namespace Coldi
             {
                 ToDoListPanel.Visible = true;
             }
-            else 
-            { 
+            else
+            {
                 ToDoListPanel.Visible = false;
             }
 
-            if (CalculatorPanel.Visible == true || ASAGOpanel.Visible==true) 
+            if (CalculatorPanel.Visible == true || ASAGOpanel.Visible == true)
             {
-                ToDoListPanel.Visible=false;
+                ToDoListPanel.Visible = false;
                 MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
             }
         }
@@ -76,7 +78,7 @@ namespace Coldi
             }
             else
             {
-               ASAGOpanel.Visible = false;
+                ASAGOpanel.Visible = false;
             }
 
             if (ToDoListPanel.Visible == true || CalculatorPanel.Visible == true)
@@ -88,12 +90,86 @@ namespace Coldi
 
         private void ViewCode_Click(object sender, EventArgs e)
         {
+            MainPanel.Visible = true;
+            if (ASAGOpanel.Visible)
+            {
+                ASAGOviewcodePanel.Visible = true;
+                CalcViewCodePanel.Visible = false;
+                ToDoList_ViewCodepanel.Visible = false;
 
+                ASAGOpanel.Visible = false;
+            }
+            if (ToDoListPanel.Visible)
+            {
+                ToDoList_ViewCodepanel.Visible = true;
+
+                CalcViewCodePanel.Visible = false;
+                ASAGOviewcodePanel.Visible = false;
+
+                ToDoListPanel.Visible = false;
+            }
+            if (CalculatorPanel.Visible)
+            {
+                CalcViewCodePanel.Visible = true;
+
+                ToDoList_ViewCodepanel.Visible = false;
+                ASAGOviewcodePanel.Visible = false;
+
+                CalculatorPanel.Visible = false;
+            }
         }
 
         private void LaunchProgram_Click(object sender, EventArgs e)
         {
-
+            if (ASAGOpanel.Visible)
+            {
+                asagoForm.Show();
+            }
+            if (ToDoListPanel.Visible)
+            {
+                toDoListForm.Show();
+            }
+            if (CalculatorPanel.Visible)
+            {
+                calculatorForm.Show();
+            }
         }
+
+        private void closeMainPanel_Click(object sender, EventArgs e)
+        {
+            MainPanel.Visible = false;
+        }
+
+        private void formASAGOview_Click(object sender, EventArgs e)
+        {
+            AsagolistBox.Visible = true;
+            classASAGOlistBox.Visible = false;
+        }
+
+        private void classCheckAsagoView_Click(object sender, EventArgs e)
+        {
+            classASAGOlistBox.Visible = true;
+            AsagolistBox.Visible = false;
+        }
+
+        private void ToDoListViewCodeForm_Click(object sender, EventArgs e)
+        {
+            ConnectDBpanel.Visible = false;
+            TableViewBD_ToDoList.Visible = false;
+        }
+
+        private void ConnectDBView_ToDoList_Click(object sender, EventArgs e)
+        {
+            ConnectDBpanel.Visible = true;
+            TableViewBD_ToDoList.Visible = false;
+        }
+
+        private void CreateTableView_ToDoList_Click(object sender, EventArgs e)
+        {
+            TableViewBD_ToDoList.Visible = true;
+            ConnectDBpanel.Visible = false;
+        }
+
+      
     }
 }
