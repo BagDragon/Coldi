@@ -13,14 +13,15 @@ namespace Coldi
 {
     public partial class ModeSelection : Form
     {
-        public ModeSelection()
+        Authorization authorization = new Authorization();
+        public ModeSelection(string nameUs)
         {
             InitializeComponent();
 
-
-            // nameUser.Text = nameUs;
+            
+            nameUser.Text = nameUs;
         }
-
+        
 
         private void ModeSelection_Load(object sender, EventArgs e)
         {
@@ -35,18 +36,23 @@ namespace Coldi
 
         private void PlayBTN_Click(object sender, EventArgs e)
         {
-
+           PlaysForm playForm = new PlaysForm(nameUser.Text);
+            playForm.Show();
+            this.Close();
         }
 
         private void ProgramsBTN_Click(object sender, EventArgs e)
         {
-
+            ProgramsForm programsForm = new ProgramsForm(nameUser.Text);
+            programsForm.Show();
+            this.Close();
         }
 
         private void BackBTN_Click(object sender, EventArgs e)
         {
             Authorization authorization = new Authorization();
             authorization.Show();
+            this.Close();
             
         }
     }

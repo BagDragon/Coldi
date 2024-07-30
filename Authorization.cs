@@ -73,10 +73,10 @@ namespace Coldi
                 {
                     MessageBox.Show("there is an account");
                         //connect form
-                   // ModeSelection modeSelection = new ModeSelection(login);
-                   // modeSelection.Show();
+                   ModeSelection modeSelection = new ModeSelection(login);
+                   modeSelection.Show();
+                    this.Close();
 
-                    
                 }
                 else
                 {
@@ -87,11 +87,18 @@ namespace Coldi
             // Close the connection after the operation
             vCon.Close();
             startForm.Close();
+            
+
+            ;
         }
 
         private void unregistered_Click(object sender, EventArgs e)
         {
-            startForm.Close();
+           
+            RegistrationForm registrationForm = new RegistrationForm();
+            registrationForm.Show();
+            this.Close ();
+            
         }
 
         private void Authorization_Load(object sender, EventArgs e)

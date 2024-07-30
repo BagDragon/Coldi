@@ -95,6 +95,7 @@
             pictureBox11 = new PictureBox();
             listBox1 = new ListBox();
             label11 = new Label();
+            BackBTN = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SnakeBTN).BeginInit();
@@ -125,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             SnakeViewCodePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BackBTN).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -167,7 +169,7 @@
             UserName.BackColor = Color.Transparent;
             UserName.Font = new Font("Segoe UI Light", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             UserName.ForeColor = Color.White;
-            UserName.Location = new Point(1065, 11);
+            UserName.Location = new Point(1113, 9);
             UserName.Name = "UserName";
             UserName.Size = new Size(57, 30);
             UserName.TabIndex = 3;
@@ -585,8 +587,7 @@
             MainCodePanel.Controls.Add(ClosePanelBTN);
             MainCodePanel.Controls.Add(TicTacToeViewCodePanel);
             MainCodePanel.Controls.Add(SnakeViewCodePanel);
-            MainCodePanel.Controls.Add(UserName);
-            MainCodePanel.Location = new Point(25, 15);
+            MainCodePanel.Location = new Point(25, 31);
             MainCodePanel.Name = "MainCodePanel";
             MainCodePanel.Size = new Size(1149, 670);
             MainCodePanel.TabIndex = 13;
@@ -902,6 +903,18 @@
             label11.TabIndex = 2;
             label11.Text = "The size and design of the form does \r\nnot matter, since we will write it all \r\nin code. Except we will need to call \r\n\"Timer\" to rename to \"timer\" instead \r\nof \"timer1\"";
             // 
+            // BackBTN
+            // 
+            BackBTN.BackColor = Color.Transparent;
+            BackBTN.Image = (Image)resources.GetObject("BackBTN.Image");
+            BackBTN.Location = new Point(27, 615);
+            BackBTN.Name = "BackBTN";
+            BackBTN.Size = new Size(94, 94);
+            BackBTN.SizeMode = PictureBoxSizeMode.AutoSize;
+            BackBTN.TabIndex = 14;
+            BackBTN.TabStop = false;
+            BackBTN.Click += BackBTN_Click;
+            // 
             // PlaysForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -921,6 +934,8 @@
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(TagBTN);
+            Controls.Add(BackBTN);
+            Controls.Add(UserName);
             Name = "PlaysForm";
             Text = "Coldi";
             Load += PlaysForm_Load;
@@ -947,7 +962,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             MainCodePanel.ResumeLayout(false);
-            MainCodePanel.PerformLayout();
             FindCoupleViewCodePanel.ResumeLayout(false);
             FindCoupleViewCodePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
@@ -963,6 +977,7 @@
             SnakeViewCodePanel.ResumeLayout(false);
             SnakeViewCodePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BackBTN).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1035,5 +1050,6 @@
         private Label label21;
         private PictureBox pictureBox17;
         private Label label18;
+        private PictureBox BackBTN;
     }
 }

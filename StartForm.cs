@@ -12,8 +12,8 @@ namespace Coldi
 
             StartBTN_Design();
 
-           
 
+            
         }
 
 
@@ -27,9 +27,20 @@ namespace Coldi
         private void StartBTN_Click(object sender, EventArgs e)
         {
             Authorization authorization = new Authorization();
-           authorization.Show();
+            authorization.Show();
 
-            this.Hide();           
+            this.Hide();
+        }
+
+        private void StartForm_Load(object sender, EventArgs e)
+        {
+            LinearGradientBrush gradientBrush = new LinearGradientBrush(this.ClientRectangle, Color.FromArgb(20, 20, 20), Color.FromArgb(120, 0, 0), LinearGradientMode.ForwardDiagonal);
+
+            // Fill the form's background with the gradient brush
+            this.Paint += (sender, e) =>
+            {
+                e.Graphics.FillRectangle(gradientBrush, this.ClientRectangle);
+            };
         }
     }
 }

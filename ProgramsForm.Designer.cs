@@ -37,7 +37,7 @@
             CalculatorBTN = new PictureBox();
             ToDoListBTN = new PictureBox();
             label2 = new Label();
-            label3 = new Label();
+            UserName = new Label();
             ToDoListPanel = new Panel();
             pictureBox1 = new PictureBox();
             label5 = new Label();
@@ -59,6 +59,24 @@
             MainPanel = new Panel();
             ToDoList_ViewCodepanel = new Panel();
             TableViewBD_ToDoList = new Panel();
+            label42 = new Label();
+            pictureBox19 = new PictureBox();
+            pictureBox18 = new PictureBox();
+            textBox5 = new TextBox();
+            pictureBox17 = new PictureBox();
+            label41 = new Label();
+            label40 = new Label();
+            label39 = new Label();
+            label38 = new Label();
+            textBox4 = new TextBox();
+            label37 = new Label();
+            label36 = new Label();
+            textBox3 = new TextBox();
+            pictureBox16 = new PictureBox();
+            label34 = new Label();
+            pictureBox15 = new PictureBox();
+            label33 = new Label();
+            label35 = new Label();
             ConnectDBpanel = new Panel();
             pictureBox13 = new PictureBox();
             label32 = new Label();
@@ -107,24 +125,6 @@
             label10 = new Label();
             listBox1 = new ListBox();
             closeMainPanelBTN = new Button();
-            label33 = new Label();
-            pictureBox15 = new PictureBox();
-            pictureBox16 = new PictureBox();
-            label34 = new Label();
-            label35 = new Label();
-            textBox3 = new TextBox();
-            label36 = new Label();
-            label37 = new Label();
-            textBox4 = new TextBox();
-            label38 = new Label();
-            label39 = new Label();
-            label40 = new Label();
-            label41 = new Label();
-            pictureBox17 = new PictureBox();
-            textBox5 = new TextBox();
-            pictureBox18 = new PictureBox();
-            pictureBox19 = new PictureBox();
-            label42 = new Label();
             ((System.ComponentModel.ISupportInitialize)BackBTN).BeginInit();
             ((System.ComponentModel.ISupportInitialize)OsagoBTN).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -140,6 +140,11 @@
             MainPanel.SuspendLayout();
             ToDoList_ViewCodepanel.SuspendLayout();
             TableViewBD_ToDoList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ConnectDBpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
@@ -152,11 +157,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -181,6 +181,7 @@
             BackBTN.SizeMode = PictureBoxSizeMode.AutoSize;
             BackBTN.TabIndex = 1;
             BackBTN.TabStop = false;
+            BackBTN.Click += BackBTNprog_Click;
             // 
             // OsagoBTN
             // 
@@ -252,17 +253,17 @@
             label2.TabIndex = 7;
             label2.Text = "Choose programs";
             // 
-            // label3
+            // UserName
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI Semilight", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(1071, 12);
-            label3.Name = "label3";
-            label3.Size = new Size(86, 45);
-            label3.TabIndex = 8;
-            label3.Text = "Uber";
+            UserName.AutoSize = true;
+            UserName.BackColor = Color.Transparent;
+            UserName.Font = new Font("Segoe UI Semilight", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            UserName.ForeColor = Color.White;
+            UserName.Location = new Point(1071, 12);
+            UserName.Name = "UserName";
+            UserName.Size = new Size(86, 45);
+            UserName.TabIndex = 8;
+            UserName.Text = "Uber";
             // 
             // ToDoListPanel
             // 
@@ -554,6 +555,184 @@
             TableViewBD_ToDoList.Size = new Size(1118, 537);
             TableViewBD_ToDoList.TabIndex = 16;
             TableViewBD_ToDoList.Visible = false;
+            // 
+            // label42
+            // 
+            label42.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label42.ForeColor = Color.White;
+            label42.Location = new Point(757, 199);
+            label42.Name = "label42";
+            label42.Size = new Size(346, 66);
+            label42.TabIndex = 33;
+            label42.Text = "8. We scroll down and click on \"Constraints\" so that when adding an entry to the table, the \"id\" increases";
+            // 
+            // pictureBox19
+            // 
+            pictureBox19.Image = (Image)resources.GetObject("pictureBox19.Image");
+            pictureBox19.Location = new Point(758, 268);
+            pictureBox19.Name = "pictureBox19";
+            pictureBox19.Size = new Size(359, 254);
+            pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox19.TabIndex = 32;
+            pictureBox19.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            pictureBox18.Image = (Image)resources.GetObject("pictureBox18.Image");
+            pictureBox18.Location = new Point(384, 352);
+            pictureBox18.Name = "pictureBox18";
+            pictureBox18.Size = new Size(330, 162);
+            pictureBox18.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox18.TabIndex = 31;
+            pictureBox18.TabStop = false;
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            textBox5.Location = new Point(372, 232);
+            textBox5.Multiline = true;
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(267, 42);
+            textBox5.TabIndex = 30;
+            textBox5.Text = "create table namebd (id bigint primary key, task varchar(100), execution varchar(100))";
+            // 
+            // pictureBox17
+            // 
+            pictureBox17.Image = (Image)resources.GetObject("pictureBox17.Image");
+            pictureBox17.Location = new Point(13, 248);
+            pictureBox17.Name = "pictureBox17";
+            pictureBox17.Size = new Size(330, 236);
+            pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox17.TabIndex = 29;
+            pictureBox17.TabStop = false;
+            // 
+            // label41
+            // 
+            label41.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label41.ForeColor = Color.White;
+            label41.Location = new Point(373, 294);
+            label41.Name = "label41";
+            label41.Size = new Size(379, 55);
+            label41.TabIndex = 28;
+            label41.Text = "7. We find our table, click on \"Properties\" and on the pencil next to the id.";
+            // 
+            // label40
+            // 
+            label40.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label40.ForeColor = Color.White;
+            label40.Location = new Point(372, 187);
+            label40.Name = "label40";
+            label40.Size = new Size(245, 53);
+            label40.TabIndex = 27;
+            label40.Text = "6.In the right part, we write the command and press f5:";
+            // 
+            // label39
+            // 
+            label39.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label39.ForeColor = Color.White;
+            label39.Location = new Point(6, 483);
+            label39.Name = "label39";
+            label39.Size = new Size(384, 47);
+            label39.TabIndex = 26;
+            label39.Text = "5. Right-click on the created database and select \"Query Tool\"";
+            // 
+            // label38
+            // 
+            label38.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label38.ForeColor = Color.White;
+            label38.Location = new Point(839, 59);
+            label38.Name = "label38";
+            label38.Size = new Size(218, 67);
+            label38.TabIndex = 25;
+            label38.Text = "4. Close the console and go to \"pgAdmin 4\". And we will create a table there.";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(1032, 25);
+            textBox4.Name = "textBox4";
+            textBox4.ReadOnly = true;
+            textBox4.Size = new Size(72, 23);
+            textBox4.TabIndex = 24;
+            textBox4.Text = "\\c namedb;";
+            // 
+            // label37
+            // 
+            label37.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label37.ForeColor = Color.White;
+            label37.Location = new Point(788, 23);
+            label37.Name = "label37";
+            label37.Size = new Size(245, 28);
+            label37.TabIndex = 23;
+            label37.Text = "3.Connecting to the database";
+            // 
+            // label36
+            // 
+            label36.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label36.ForeColor = Color.White;
+            label36.Location = new Point(566, 123);
+            label36.Name = "label36";
+            label36.Size = new Size(200, 30);
+            label36.TabIndex = 22;
+            label36.Text = "P.S. the name can be any";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(651, 103);
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(168, 23);
+            textBox3.TabIndex = 21;
+            textBox3.Text = "CREATE DATABASE namedb;";
+            // 
+            // pictureBox16
+            // 
+            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
+            pictureBox16.Location = new Point(244, 10);
+            pictureBox16.Name = "pictureBox16";
+            pictureBox16.Size = new Size(282, 125);
+            pictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox16.TabIndex = 18;
+            pictureBox16.TabStop = false;
+            // 
+            // label34
+            // 
+            label34.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label34.ForeColor = Color.White;
+            label34.Location = new Point(246, 138);
+            label34.Name = "label34";
+            label34.Size = new Size(256, 36);
+            label34.TabIndex = 17;
+            label34.Text = "1.2 Enter the password";
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
+            pictureBox15.Location = new Point(27, 6);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(175, 188);
+            pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox15.TabIndex = 16;
+            pictureBox15.TabStop = false;
+            // 
+            // label33
+            // 
+            label33.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label33.ForeColor = Color.White;
+            label33.Location = new Point(3, 197);
+            label33.Name = "label33";
+            label33.Size = new Size(312, 52);
+            label33.TabIndex = 15;
+            label33.Text = "1. In the Start button, find the Postgresql file and run the \"SQL Shell\".";
+            // 
+            // label35
+            // 
+            label35.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label35.ForeColor = Color.White;
+            label35.Location = new Point(561, 16);
+            label35.Name = "label35";
+            label35.Size = new Size(230, 118);
+            label35.TabIndex = 19;
+            label35.Text = "2. After entering the password, we create a database (if there is none). We are writing this command:";
             // 
             // ConnectDBpanel
             // 
@@ -1082,184 +1261,6 @@
             closeMainPanelBTN.UseVisualStyleBackColor = false;
             closeMainPanelBTN.Click += closeMainPanel_Click;
             // 
-            // label33
-            // 
-            label33.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label33.ForeColor = Color.White;
-            label33.Location = new Point(3, 197);
-            label33.Name = "label33";
-            label33.Size = new Size(312, 52);
-            label33.TabIndex = 15;
-            label33.Text = "1. In the Start button, find the Postgresql file and run the \"SQL Shell\".";
-            // 
-            // pictureBox15
-            // 
-            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
-            pictureBox15.Location = new Point(27, 6);
-            pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(175, 188);
-            pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox15.TabIndex = 16;
-            pictureBox15.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
-            pictureBox16.Location = new Point(244, 10);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(282, 125);
-            pictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox16.TabIndex = 18;
-            pictureBox16.TabStop = false;
-            // 
-            // label34
-            // 
-            label34.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label34.ForeColor = Color.White;
-            label34.Location = new Point(246, 138);
-            label34.Name = "label34";
-            label34.Size = new Size(256, 36);
-            label34.TabIndex = 17;
-            label34.Text = "1.2 Enter the password";
-            // 
-            // label35
-            // 
-            label35.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label35.ForeColor = Color.White;
-            label35.Location = new Point(561, 16);
-            label35.Name = "label35";
-            label35.Size = new Size(230, 118);
-            label35.TabIndex = 19;
-            label35.Text = "2. After entering the password, we create a database (if there is none). We are writing this command:";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(651, 103);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(168, 23);
-            textBox3.TabIndex = 21;
-            textBox3.Text = "CREATE DATABASE namedb;";
-            // 
-            // label36
-            // 
-            label36.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label36.ForeColor = Color.White;
-            label36.Location = new Point(566, 123);
-            label36.Name = "label36";
-            label36.Size = new Size(200, 30);
-            label36.TabIndex = 22;
-            label36.Text = "P.S. the name can be any";
-            // 
-            // label37
-            // 
-            label37.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label37.ForeColor = Color.White;
-            label37.Location = new Point(788, 23);
-            label37.Name = "label37";
-            label37.Size = new Size(245, 28);
-            label37.TabIndex = 23;
-            label37.Text = "3.Connecting to the database";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(1032, 25);
-            textBox4.Name = "textBox4";
-            textBox4.ReadOnly = true;
-            textBox4.Size = new Size(72, 23);
-            textBox4.TabIndex = 24;
-            textBox4.Text = "\\c namedb;";
-            // 
-            // label38
-            // 
-            label38.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label38.ForeColor = Color.White;
-            label38.Location = new Point(839, 59);
-            label38.Name = "label38";
-            label38.Size = new Size(218, 67);
-            label38.TabIndex = 25;
-            label38.Text = "4. Close the console and go to \"pgAdmin 4\". And we will create a table there.";
-            // 
-            // label39
-            // 
-            label39.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label39.ForeColor = Color.White;
-            label39.Location = new Point(6, 483);
-            label39.Name = "label39";
-            label39.Size = new Size(384, 47);
-            label39.TabIndex = 26;
-            label39.Text = "5. Right-click on the created database and select \"Query Tool\"";
-            // 
-            // label40
-            // 
-            label40.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label40.ForeColor = Color.White;
-            label40.Location = new Point(372, 187);
-            label40.Name = "label40";
-            label40.Size = new Size(245, 53);
-            label40.TabIndex = 27;
-            label40.Text = "6.In the right part, we write the command and press f5:";
-            // 
-            // label41
-            // 
-            label41.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label41.ForeColor = Color.White;
-            label41.Location = new Point(373, 294);
-            label41.Name = "label41";
-            label41.Size = new Size(379, 55);
-            label41.TabIndex = 28;
-            label41.Text = "7. We find our table, click on \"Properties\" and on the pencil next to the id.";
-            // 
-            // pictureBox17
-            // 
-            pictureBox17.Image = (Image)resources.GetObject("pictureBox17.Image");
-            pictureBox17.Location = new Point(13, 248);
-            pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(330, 236);
-            pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox17.TabIndex = 29;
-            pictureBox17.TabStop = false;
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            textBox5.Location = new Point(372, 232);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(267, 42);
-            textBox5.TabIndex = 30;
-            textBox5.Text = "create table namebd (id bigint primary key, task varchar(100), execution varchar(100))";
-            // 
-            // pictureBox18
-            // 
-            pictureBox18.Image = (Image)resources.GetObject("pictureBox18.Image");
-            pictureBox18.Location = new Point(392, 347);
-            pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(330, 162);
-            pictureBox18.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox18.TabIndex = 31;
-            pictureBox18.TabStop = false;
-            // 
-            // pictureBox19
-            // 
-            pictureBox19.Image = (Image)resources.GetObject("pictureBox19.Image");
-            pictureBox19.Location = new Point(758, 268);
-            pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(359, 254);
-            pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox19.TabIndex = 32;
-            pictureBox19.TabStop = false;
-            // 
-            // label42
-            // 
-            label42.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label42.ForeColor = Color.White;
-            label42.Location = new Point(757, 199);
-            label42.Name = "label42";
-            label42.Size = new Size(346, 66);
-            label42.TabIndex = 33;
-            label42.Text = "8. We scroll down and click on \"Constraints\" so that when adding an entry to the table, the \"id\" increases";
-            // 
             // ProgramsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1270,7 +1271,7 @@
             Controls.Add(ASAGOpanel);
             Controls.Add(CalculatorPanel);
             Controls.Add(ToDoListPanel);
-            Controls.Add(label3);
+            Controls.Add(UserName);
             Controls.Add(label2);
             Controls.Add(ToDoListBTN);
             Controls.Add(CalculatorBTN);
@@ -1279,6 +1280,7 @@
             Controls.Add(OsagoBTN);
             Controls.Add(BackBTN);
             Controls.Add(label1);
+            MaximumSize = new Size(1209, 756);
             Name = "ProgramsForm";
             Text = "Coldi";
             Load += ProgramsForm_Load;
@@ -1303,6 +1305,11 @@
             ToDoList_ViewCodepanel.PerformLayout();
             TableViewBD_ToDoList.ResumeLayout(false);
             TableViewBD_ToDoList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ConnectDBpanel.ResumeLayout(false);
             ConnectDBpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
@@ -1318,11 +1325,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1337,7 +1339,7 @@
         private PictureBox CalculatorBTN;
         private PictureBox ToDoListBTN;
         private Label label2;
-        private Label label3;
+        private Label UserName;
         private Panel ToDoListPanel;
         private Label label4;
         private Button LaunchToDoListBTN;

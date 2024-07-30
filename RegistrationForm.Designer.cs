@@ -171,6 +171,7 @@
             BackBTN.SizeMode = PictureBoxSizeMode.AutoSize;
             BackBTN.TabIndex = 10;
             BackBTN.TabStop = false;
+            BackBTN.Click += BackBTN_Click;
             // 
             // RegistrationForm
             // 

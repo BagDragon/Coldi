@@ -4,10 +4,11 @@ namespace Coldi
 {
     public partial class PlaysForm : Form
     {
-        public PlaysForm()
+        
+        public PlaysForm(string UsName)
         {
             InitializeComponent();
-
+            UserName.Text = UsName;
         }
 
         SnakeForm snakeForm = new SnakeForm();
@@ -155,12 +156,12 @@ namespace Coldi
         {
             if (SnakePanel.Visible == true)
             {
-               snakeForm.Show();
+                snakeForm.Show();
             }
 
             if (TicTacToePanel.Visible == true)
             {
-                TicTacToeForm.Show(); 
+                TicTacToeForm.Show();
             }
 
             if (TagPanel.Visible == true)
@@ -172,6 +173,13 @@ namespace Coldi
             {
                 findCoupleForm.Show();
             }
+        }
+
+        private void BackBTN_Click(object sender, EventArgs e)
+        {
+            ModeSelection modeSelection = new ModeSelection(UserName.Text);
+            modeSelection.Show();
+            this.Close();
         }
     }
 }

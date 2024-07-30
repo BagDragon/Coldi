@@ -25,7 +25,7 @@ namespace Coldi
         public string password;
         public string Repeat_password;
 
-      
+
 
         string vStrConnection = "Server= localhost; port= 5432; user id= postgres; password= 93538565; database= UserBD;";
 
@@ -52,7 +52,7 @@ namespace Coldi
             password = PasswordBox.Text;
             Repeat_password = Repeat_PasswordBox.Text;
 
-            if(password == Repeat_password)
+            if (password == Repeat_password)
             {
                 try
                 {
@@ -68,6 +68,10 @@ namespace Coldi
                         MessageBox.Show("User added successfully!");
 
                         vCon.Close();
+
+                        this.Close();
+                        Authorization authorization = new Authorization();
+                        authorization.Show();
                     }
                 }
                 catch (Exception ex)
@@ -77,7 +81,7 @@ namespace Coldi
                 }
             }
 
-            
+
         }
 
         private void RegistrationForm_Load(object sender, EventArgs e)
@@ -91,5 +95,11 @@ namespace Coldi
             };
         }
 
+        private void BackBTN_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Authorization auth = new Authorization();
+            auth.Show();
+        }
     }
 }

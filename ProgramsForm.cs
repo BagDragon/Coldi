@@ -13,9 +13,11 @@ namespace Coldi
 {
     public partial class ProgramsForm : Form
     {
-        public ProgramsForm()
+        public ProgramsForm(string usName)
         {
             InitializeComponent();
+
+            UserName.Text = usName;
         }
 
         private void ProgramsForm_Load(object sender, EventArgs e)
@@ -170,6 +172,11 @@ namespace Coldi
             ConnectDBpanel.Visible = false;
         }
 
-      
+        private void BackBTNprog_Click(object sender, EventArgs e)
+        {
+            ModeSelection modeSelection = new ModeSelection(UserName.Text);
+            modeSelection.Show();
+            this.Close();
+        }
     }
 }

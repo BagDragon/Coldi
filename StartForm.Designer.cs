@@ -147,7 +147,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
-            ClientSize = new Size(1177, 717);
+            ClientSize = new Size(1181, 721);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox5);
@@ -162,6 +162,7 @@
             MinimumSize = new Size(1197, 760);
             Name = "StartForm";
             Text = "Coldi";
+            Load += StartForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
