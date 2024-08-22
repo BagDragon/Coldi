@@ -8,11 +8,8 @@
             AssignIconsToSquares();
         }
 
-        Label firstClicked = null;
-
-
-        Label secondClicked = null;
-
+        Label? firstClicked;
+        Label? secondClicked;
 
 
         Random random = new Random();
@@ -28,7 +25,7 @@
 
             foreach (Control control in tableLayoutPanel1.Controls)
             {
-                Label iconLabel = control as Label;
+                Label? iconLabel = control as Label;
                 if (iconLabel != null)
                 {
                     int randomNumber = random.Next(icons.Count);
@@ -45,7 +42,7 @@
             if (timer1.Enabled == true)
                 return;
 
-            Label clickedLabel = sender as Label;
+            Label? clickedLabel = sender as Label;
 
             if (clickedLabel != null)
             {

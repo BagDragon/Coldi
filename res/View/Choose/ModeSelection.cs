@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using Coldi.res.Control;
+using System;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace Coldi
 {
@@ -25,13 +19,7 @@ namespace Coldi
 
         private void ModeSelection_Load(object sender, EventArgs e)
         {
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(this.ClientRectangle, Color.FromArgb(20, 20, 20), Color.FromArgb(120, 0, 0), LinearGradientMode.Vertical);
-
-            // Fill the form's background with the gradient brush
-            this.Paint += (sender, e) =>
-            {
-                e.Graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-            };
+            BackgroundForms.backgroundForm(this);
         }
 
         private void PlayBTN_Click(object sender, EventArgs e)

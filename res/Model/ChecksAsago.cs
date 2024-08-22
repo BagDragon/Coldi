@@ -1,4 +1,4 @@
-﻿namespace Coldi
+﻿namespace Coldi.res.Model
 {
     class ChecksAsago
     {
@@ -22,7 +22,7 @@
                 {
                     ScoreKof.Text = kof[selectedIndex].ToString();
                 }
-               
+
 
             }
 
@@ -122,17 +122,17 @@
                 "Прочие города"
             };
 
-              
-               
+
+
                 foreach (string items in city)
                 {
 
                     CityComboBox.Items.Add(items);
 
                 }
-                
-               
-                                        
+
+
+
             }
 
             //////////////////////////////////
@@ -256,7 +256,7 @@
             int Exp = int.Parse(ExperienceTextBox.Text);
 
             double Kof_kmb = 3.92;//yes
-            
+
             for (int i = 1; i <= Exp; i++)
             {
                 Kof_kmb = Kof_kmb - 0.173;
@@ -307,7 +307,7 @@
 
         }
 
-        public static void CheckTarif(ComboBox TransportСategoryСomboBox , Label kofTarig)
+        public static void CheckTarif(ComboBox TransportСategoryСomboBox, Label kofTarig)
         {
             int selectCateg = TransportСategoryСomboBox.SelectedIndex;
             string[] kof =

@@ -1,4 +1,5 @@
-﻿using System.Drawing.Drawing2D;
+﻿using Coldi.res.Control;
+using System.Drawing.Drawing2D;
 
 namespace Coldi
 {
@@ -18,13 +19,7 @@ namespace Coldi
 
         private void PlaysForm_Load(object sender, EventArgs e)
         {
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(this.ClientRectangle, Color.FromArgb(20, 20, 20), Color.FromArgb(120, 0, 0), LinearGradientMode.Vertical);
-
-            // Fill the form's background with the gradient brush
-            this.Paint += (sender, e) =>
-            {
-                e.Graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-            };
+            BackgroundForms.backgroundForm(this);
         }
 
         private void SnakeBTN_Click(object sender, EventArgs e)

@@ -1,43 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="AsagoForm.cs">
+    <Compile Update="res\View\Programs\AsagoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Authorization.cs">
+    <Compile Update="res\View\User\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CalculatorForm.cs">
+    <Compile Update="res\View\Programs\CalculatorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FindCoupleForm.cs">
+    <Compile Update="res\View\Plays\FindCoupleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ModeSelection.cs">
+    <Compile Update="res\View\Choose\ModeSelection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PlaysForm.cs">
+    <Compile Update="res\View\Choose\PlaysForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ProgramsForm.cs">
+    <Compile Update="res\View\Choose\ProgramsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RegistrationForm.cs">
+    <Compile Update="res\View\User\RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SnakeForm.cs">
+    <Compile Update="res\View\Plays\SnakeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TagForm.cs">
+    <Compile Update="res\View\Plays\TagForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TicTacToeForm.cs">
+    <Compile Update="res\View\Plays\TicTacToeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ToDoListForm.cs">
+    <Compile Update="res\View\Programs\ToDoListForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
