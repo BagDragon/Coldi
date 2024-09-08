@@ -12,6 +12,9 @@ namespace Coldi
             UserName.Text = UsName;
         }
 
+        bool checkPanel;
+
+
         SnakeForm snakeForm = new SnakeForm();
         TicTacToeForm TicTacToeForm = new TicTacToeForm();
         TagForm tagForm = new TagForm();
@@ -24,118 +27,45 @@ namespace Coldi
 
         private void SnakeBTN_Click(object sender, EventArgs e)
         {
-            if (SnakePanel.Visible == true)
-            {
-                SnakePanel.Visible = false;
-            }
-            else
-            {
-                SnakePanel.Visible = true;
-            }
+            ActionsWithPanel.OpenAndClose_Panel(SnakePanel, checkPanel);
 
-            if (TicTacToePanel.Visible == true || TagPanel.Visible == true || FindCouplePanel.Visible == true)
-            {
-                SnakePanel.Visible = false;
-                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the program icon");
-            }
-
-
+            ActionsWithPanel.block_Panel(TicTacToePanel, TagPanel, FindCouplePanel, checkPanel);
+          
         }
-
-
-
-
 
 
         private void TikTakToeBTN_Click(object sender, EventArgs e)
         {
-            if (TicTacToePanel.Visible == true)
-            {
-                TicTacToePanel.Visible = false;
-            }
-            else
-            {
-                TicTacToePanel.Visible = true;
-            }
-
-            if (SnakePanel.Visible == true || TagPanel.Visible == true || FindCouplePanel.Visible == true)
-            {
-                TicTacToePanel.Visible = false;
-                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
-            }
+           ActionsWithPanel.OpenAndClose_Panel(TicTacToePanel, checkPanel);
+            
+           ActionsWithPanel.block_Panel(SnakePanel,TagPanel,FindCouplePanel, checkPanel);
+                     
         }
 
         private void TagBTN_Click(object sender, EventArgs e)
         {
-            if (TagPanel.Visible == true)
-            {
-                TagPanel.Visible = false;
-            }
-            else
-            {
-                TagPanel.Visible = true;
-            }
+            ActionsWithPanel.OpenAndClose_Panel(TagPanel, checkPanel);
 
-            if (SnakePanel.Visible == true || TicTacToePanel.Visible == true || FindCouplePanel.Visible == true)
-            {
-                TagPanel.Visible = false;
-                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
-            }
+            ActionsWithPanel.block_Panel(SnakePanel,TicTacToePanel,FindCouplePanel,checkPanel);           
         }
 
         private void CoupleBTN_Click(object sender, EventArgs e)
         {
-            if (FindCouplePanel.Visible == true)
-            {
-                FindCouplePanel.Visible = false;
-            }
-            else
-            {
-                FindCouplePanel.Visible = true;
-            }
+            ActionsWithPanel.OpenAndClose_Panel(FindCouplePanel, checkPanel);
 
-            if (SnakePanel.Visible == true || TicTacToePanel.Visible == true || TagPanel.Visible == true)
-            {
-                TagPanel.Visible = false;
-                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
-            }
+            ActionsWithPanel.block_Panel(SnakePanel,TicTacToePanel,TagPanel, checkPanel);
         }
 
         private void ViewCodeBTN_Click(object sender, EventArgs e)
         {
 
-            if (MainCodePanel.Visible == false)
-            {
-                MainCodePanel.Visible = true;
+            MainCodePanel.Visible = !MainCodePanel.Visible;
 
-                if (SnakePanel.Visible == true)
-                {
-                    SnakePanel.Visible = false;
-                    SnakeViewCodePanel.Visible = true;
-                }
-
-                if (TicTacToePanel.Visible == true)
-                {
-                    TicTacToePanel.Visible = false;
-                    TicTacToeViewCodePanel.Visible = true;
-                }
-
-                if (TagPanel.Visible == true)
-                {
-                    TagPanel.Visible = false;
-                    TagViewCodePanel.Visible = true;
-                }
-
-                if (FindCouplePanel.Visible == true)
-                {
-                    FindCouplePanel.Visible = false;
-                    FindCoupleViewCodePanel.Visible = true;
-                }
-            }
-            else
-            {
-                MainCodePanel.Visible = false;
-            }
+            ActionsWithPanel.OpenAndClose_Panel(SnakePanel, SnakeViewCodePanel);
+            ActionsWithPanel.OpenAndClose_Panel(TicTacToePanel, TicTacToeViewCodePanel);
+            ActionsWithPanel.OpenAndClose_Panel(TagPanel, TagViewCodePanel);
+            ActionsWithPanel.OpenAndClose_Panel(FindCouplePanel, FindCoupleViewCodePanel);
+          
 
         }
 
@@ -149,25 +79,10 @@ namespace Coldi
 
         private void PlayPanel_Click(object sender, EventArgs e)
         {
-            if (SnakePanel.Visible == true)
-            {
-                snakeForm.Show();
-            }
-
-            if (TicTacToePanel.Visible == true)
-            {
-                TicTacToeForm.Show();
-            }
-
-            if (TagPanel.Visible == true)
-            {
-                tagForm.Show();
-            }
-
-            if (FindCouplePanel.Visible == true)
-            {
-                findCoupleForm.Show();
-            }
+            ActionsWithPanel.openForm_Panel(SnakePanel, snakeForm);
+            ActionsWithPanel.openForm_Panel(TicTacToePanel, TicTacToeForm);
+            ActionsWithPanel.openForm_Panel(TagPanel, tagForm);
+            ActionsWithPanel.openForm_Panel(FindCouplePanel,findCoupleForm);          
         }
 
         private void BackBTN_Click(object sender, EventArgs e)

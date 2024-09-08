@@ -124,7 +124,7 @@
             label11 = new Label();
             label10 = new Label();
             listBox1 = new ListBox();
-            closeMainPanelBTN = new Button();
+            closePanelBTN = new Button();
             ((System.ComponentModel.ISupportInitialize)BackBTN).BeginInit();
             ((System.ComponentModel.ISupportInitialize)OsagoBTN).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -502,7 +502,7 @@
             MainPanel.Controls.Add(ToDoList_ViewCodepanel);
             MainPanel.Controls.Add(ASAGOviewcodePanel);
             MainPanel.Controls.Add(CalcViewCodePanel);
-            MainPanel.Controls.Add(closeMainPanelBTN);
+            MainPanel.Controls.Add(closePanelBTN);
             MainPanel.Location = new Point(25, 23);
             MainPanel.Name = "MainPanel";
             MainPanel.Size = new Size(1149, 670);
@@ -529,6 +529,7 @@
             ToDoList_ViewCodepanel.Name = "ToDoList_ViewCodepanel";
             ToDoList_ViewCodepanel.Size = new Size(1124, 603);
             ToDoList_ViewCodepanel.TabIndex = 14;
+            ToDoList_ViewCodepanel.Visible = false;
             // 
             // TableViewBD_ToDoList
             // 
@@ -592,6 +593,7 @@
             textBox5.Location = new Point(372, 232);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
+            textBox5.ReadOnly = true;
             textBox5.Size = new Size(267, 42);
             textBox5.TabIndex = 30;
             textBox5.Text = "create table namebd (id bigint primary key, task varchar(100), execution varchar(100))";
@@ -1246,20 +1248,20 @@
             listBox1.Size = new Size(710, 529);
             listBox1.TabIndex = 0;
             // 
-            // closeMainPanelBTN
+            // closePanelBTN
             // 
-            closeMainPanelBTN.AutoSize = true;
-            closeMainPanelBTN.BackColor = Color.FromArgb(192, 0, 0);
-            closeMainPanelBTN.FlatStyle = FlatStyle.Popup;
-            closeMainPanelBTN.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            closeMainPanelBTN.ForeColor = Color.White;
-            closeMainPanelBTN.Location = new Point(1033, 621);
-            closeMainPanelBTN.Name = "closeMainPanelBTN";
-            closeMainPanelBTN.Size = new Size(100, 40);
-            closeMainPanelBTN.TabIndex = 0;
-            closeMainPanelBTN.Text = "Close";
-            closeMainPanelBTN.UseVisualStyleBackColor = false;
-            closeMainPanelBTN.Click += closeMainPanel_Click;
+            closePanelBTN.AutoSize = true;
+            closePanelBTN.BackColor = Color.FromArgb(192, 0, 0);
+            closePanelBTN.FlatStyle = FlatStyle.Popup;
+            closePanelBTN.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            closePanelBTN.ForeColor = Color.White;
+            closePanelBTN.Location = new Point(1033, 621);
+            closePanelBTN.Name = "closePanelBTN";
+            closePanelBTN.Size = new Size(100, 40);
+            closePanelBTN.TabIndex = 0;
+            closePanelBTN.Text = "Close";
+            closePanelBTN.UseVisualStyleBackColor = false;
+            closePanelBTN.Click += closePanel_Click;
             // 
             // ProgramsForm
             // 
@@ -1359,7 +1361,7 @@
         private Button button4;
         private Label label9;
         private Panel MainPanel;
-        private Button closeMainPanelBTN;
+        private Button closePanelBTN;
         private Panel CalcViewCodePanel;
         private ListBox listBox1;
         private Label label10;

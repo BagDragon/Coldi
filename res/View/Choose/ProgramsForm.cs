@@ -22,111 +22,54 @@ namespace Coldi
         AsagoForm asagoForm = new AsagoForm();
         ToDoListForm toDoListForm = new ToDoListForm();
 
+        bool checkPanel;
 
         private void ToDoListBTN_Click(object sender, EventArgs e)
         {
-            if (ToDoListPanel.Visible == false)
-            {
-                ToDoListPanel.Visible = true;
-            }
-            else
-            {
-                ToDoListPanel.Visible = false;
-            }
+            ActionsWithPanel.OpenAndClose_Panel(ToDoListPanel, checkPanel);
 
-            if (CalculatorPanel.Visible == true || ASAGOpanel.Visible == true)
-            {
-                ToDoListPanel.Visible = false;
-                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
-            }
+            ActionsWithPanel.block_Panel(ASAGOpanel, CalculatorPanel, checkPanel);
         }
 
         private void CalculatorBTN_Click(object sender, EventArgs e)
         {
-            if (CalculatorPanel.Visible == false)
-            {
-                CalculatorPanel.Visible = true;
-            }
-            else
-            {
-                CalculatorPanel.Visible = false;
-            }
+            ActionsWithPanel.OpenAndClose_Panel(CalculatorPanel, checkPanel);
 
-            if (ToDoListPanel.Visible == true || ASAGOpanel.Visible == true)
-            {
-                CalculatorPanel.Visible = false;
-                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
-            }
+            ActionsWithPanel.block_Panel(ASAGOpanel, ToDoListPanel, checkPanel);
         }
 
         private void OsagoBTN_Click(object sender, EventArgs e)
         {
-            if (ASAGOpanel.Visible == false)
-            {
-                ASAGOpanel.Visible = true;
-            }
-            else
-            {
-                ASAGOpanel.Visible = false;
-            }
+            ActionsWithPanel.OpenAndClose_Panel(ASAGOpanel, checkPanel);
 
-            if (ToDoListPanel.Visible == true || CalculatorPanel.Visible == true)
-            {
-                ASAGOpanel.Visible = false;
-                MessageBox.Show("To launch the panel, you need to close the active ones by clicking on the game icon");
-            }
+            ActionsWithPanel.block_Panel(ToDoListPanel, CalculatorPanel, checkPanel);
         }
 
         private void ViewCode_Click(object sender, EventArgs e)
         {
             MainPanel.Visible = true;
-            if (ASAGOpanel.Visible)
-            {
-                ASAGOviewcodePanel.Visible = true;
-                CalcViewCodePanel.Visible = false;
-                ToDoList_ViewCodepanel.Visible = false;
 
-                ASAGOpanel.Visible = false;
-            }
-            if (ToDoListPanel.Visible)
-            {
-                ToDoList_ViewCodepanel.Visible = true;
-
-                CalcViewCodePanel.Visible = false;
-                ASAGOviewcodePanel.Visible = false;
-
-                ToDoListPanel.Visible = false;
-            }
-            if (CalculatorPanel.Visible)
-            {
-                CalcViewCodePanel.Visible = true;
-
-                ToDoList_ViewCodepanel.Visible = false;
-                ASAGOviewcodePanel.Visible = false;
-
-                CalculatorPanel.Visible = false;
-            }
+            ActionsWithPanel.OpenAndClose_Panel(ASAGOpanel, ASAGOviewcodePanel);
+            ActionsWithPanel.OpenAndClose_Panel(CalculatorPanel, CalcViewCodePanel);
+            ActionsWithPanel.OpenAndClose_Panel(ToDoListPanel, ToDoList_ViewCodepanel);
+        
         }
 
         private void LaunchProgram_Click(object sender, EventArgs e)
         {
-            if (ASAGOpanel.Visible)
-            {
-                asagoForm.Show();
-            }
-            if (ToDoListPanel.Visible)
-            {
-                toDoListForm.Show();
-            }
-            if (CalculatorPanel.Visible)
-            {
-                calculatorForm.Show();
-            }
+
+            ActionsWithPanel.openForm_Panel(ASAGOpanel, asagoForm);
+            ActionsWithPanel.openForm_Panel(ToDoListPanel, toDoListForm);
+            ActionsWithPanel.openForm_Panel(CalculatorPanel, calculatorForm);                      
         }
 
-        private void closeMainPanel_Click(object sender, EventArgs e)
+        private void closePanel_Click(object sender, EventArgs e)
         {
             MainPanel.Visible = false;
+            ToDoList_ViewCodepanel.Visible = false;
+            ASAGOviewcodePanel.Visible = false;
+            CalcViewCodePanel.Visible = false;
+
         }
 
         private void formASAGOview_Click(object sender, EventArgs e)

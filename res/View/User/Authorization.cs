@@ -1,8 +1,5 @@
 ﻿using Coldi.res.Control;
 using Coldi.res.Model;
-using Npgsql;
-using NpgsqlTypes;
-using System.Data;
 
 
 namespace Coldi
@@ -19,6 +16,7 @@ namespace Coldi
         private void Log_in_Click(object sender, EventArgs e)
         {
             FindUsers.findUser(loginBox.Text, passwordBox.Text);
+            this.Close();
 
         }
 

@@ -1,13 +1,6 @@
 ﻿using Coldi.res.Control;
-using Microsoft.VisualBasic.Logging;
 using Npgsql;
 using NpgsqlTypes;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Coldi.res.Model
 {
