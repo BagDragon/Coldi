@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing; // Add this line
 using System.Windows.Forms;
-using SiColdi.Control;
 
 
 namespace Coldi

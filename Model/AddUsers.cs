@@ -1,4 +1,4 @@
-﻿using Coldi.Control;
+﻿using Coldi.Controls;
 using Npgsql;
 using NpgsqlTypes;
 

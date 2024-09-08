@@ -1,4 +1,4 @@
-﻿using Coldi.Control;
+﻿using Coldi.Controls;
 using Coldi.Model;
 
 namespace Coldi
