@@ -62,6 +62,7 @@ namespace Coldi
 
         private void _generateFruit()
         {
+            
            Random rnd = new Random();
             rI = rnd.Next(0, _height - _sizeOfSides);
             int tempI = rI % _sizeOfSides;

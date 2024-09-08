@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Coldi.res.Control
+namespace Coldi.Controls
 {
     static class ConnectDB
-    {      
-        public static NpgsqlConnection connection() 
+    {
+        public static NpgsqlConnection connection()
         {
             string vStrConnection = "Server= localhost; port= 5432; user id= postgres; password= 93538565; database= UserBD;";
 
@@ -21,8 +21,8 @@ namespace Coldi.res.Control
             if (vCon.State == ConnectionState.Closed)
             {
                 vCon.Open();
-            }         
-            return vCon;          
+            }
+            return vCon;
         }
     }
 }

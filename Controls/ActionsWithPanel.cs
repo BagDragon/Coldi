@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Coldi.res.Control
+namespace Coldi.Controls
 {
-   static class ActionsWithPanel
+    static class ActionsWithPanel
     {
-      static  public void OpenAndClose_Panel(Panel openPanel, bool open)
+        static public void OpenAndClose_Panel(Panel openPanel, bool open)
         {
             openPanel.Visible = !openPanel.Visible;
             open = !open;
-           
+
         }
-        static  public void OpenAndClose_Panel(Panel panelMain, Panel panelView)
+        static public void OpenAndClose_Panel(Panel panelMain, Panel panelView)
         {
 
             if (panelMain.Visible)
@@ -22,23 +22,23 @@ namespace Coldi.res.Control
                 panelView.Visible = true;
                 panelMain.Visible = !panelMain.Visible;
             }
-            
-           
-        } 
-              
 
-       static public void block_Panel(Panel panel1, Panel panel2, Panel panel3, bool BlockPanel)
+
+        }
+
+
+        static public void block_Panel(Panel panel1, Panel panel2, Panel panel3, bool BlockPanel)
         {
-           
+
             BlockPanel = !BlockPanel;
 
             panel1.Visible = false;
             panel2.Visible = false;
             panel3.Visible = false;
-                      
+
         }
-        
-       static public void block_Panel(Panel panel1, Panel panel2, bool BlockPanel) 
+
+        static public void block_Panel(Panel panel1, Panel panel2, bool BlockPanel)
         {
             BlockPanel = !BlockPanel;
 
@@ -46,9 +46,9 @@ namespace Coldi.res.Control
             panel2.Visible = false;
         }
 
-        static public void openForm_Panel(Panel panel,Form form) 
+        static public void openForm_Panel(Panel panel, Form form)
         {
-            if (panel.Visible) 
+            if (panel.Visible)
             {
                 form.Show();
             }

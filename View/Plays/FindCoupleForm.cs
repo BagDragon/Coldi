@@ -1,4 +1,11 @@
-﻿namespace Coldi
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing; // Add this line
+using System.Windows.Forms;
+using SiColdi.Control;
+
+
+namespace Coldi
 {
     public partial class FindCoupleForm : Form
     {
@@ -10,6 +17,7 @@
 
         Label? firstClicked;
         Label? secondClicked;
+
 
 
         Random random = new Random();
@@ -107,10 +115,6 @@
             MessageBox.Show("You matched all the icons!", "Congratulations");
             Close();
         }
-
-        private void leavеBTN_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
