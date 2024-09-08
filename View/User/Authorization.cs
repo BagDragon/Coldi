@@ -1,6 +1,5 @@
-﻿using Coldi.res.Control;
-using Coldi.res.Model;
-
+﻿using Coldi.Control;
+using Coldi.Model;
 
 namespace Coldi
 {

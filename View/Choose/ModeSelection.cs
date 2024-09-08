@@ -1,4 +1,4 @@
-﻿using Coldi.res.Control;
+﻿using Coldi.Control;
 using System;
 using System.Drawing.Drawing2D;
 

@@ -1,8 +1,8 @@
-﻿using Coldi.res.Control;
+﻿using Coldi.Control;
 using Npgsql;
 using NpgsqlTypes;
 
-namespace Coldi.res.Model
+namespace Coldi.Model
 {
     static class AddUsers
     {

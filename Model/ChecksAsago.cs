@@ -1,4 +1,4 @@
-﻿namespace Coldi.res.Model
+﻿namespace Coldi.Model
 {
     class ChecksAsago
     {

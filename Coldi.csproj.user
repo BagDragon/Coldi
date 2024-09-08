@@ -1,43 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="res\View\Programs\AsagoForm.cs">
+    <Compile Update="View\Programs\AsagoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="res\View\User\Authorization.cs">
+    <Compile Update="View\User\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="res\View\Programs\CalculatorForm.cs">
+    <Compile Update="View\Programs\CalculatorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="res\View\Plays\FindCoupleForm.cs">
+    <Compile Update="View\Plays\FindCoupleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="res\View\Choose\ModeSelection.cs">
+    <Compile Update="View\Choose\ModeSelection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="res\View\Choose\PlaysForm.cs">
+    <Compile Update="View\Choose\PlaysForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="res\View\Choose\ProgramsForm.cs">
+    <Compile Update="View\Choose\ProgramsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="res\View\User\RegistrationForm.cs">
+    <Compile Update="View\User\RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="res\View\Plays\SnakeForm.cs">
+    <Compile Update="View\Plays\SnakeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="res\View\Plays\TagForm.cs">
+    <Compile Update="View\Plays\TagForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="res\View\Plays\TicTacToeForm.cs">
+    <Compile Update="View\Plays\TicTacToeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="res\View\Programs\ToDoListForm.cs">
+    <Compile Update="View\Programs\ToDoListForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

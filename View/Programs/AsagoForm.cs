@@ -1,5 +1,5 @@
 ﻿using System.Reflection.Metadata;
-using Coldi.res.Model;
+using Coldi.Model;
 
 namespace Coldi
 {
