@@ -44,3 +44,4 @@ C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.ProgramsForm
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.CalculatorForm.resources
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.AsagoForm.resources
 C:\Users\пк\Desktop\Projects\Coldi\obj\Debug\net8.0-windows\Coldi.ToDoListForm.resources
+C:\Users\пк\Desktop\Projects\Coldi\bin\Debug\net8.0-windows\BCrypt.Net.dll
