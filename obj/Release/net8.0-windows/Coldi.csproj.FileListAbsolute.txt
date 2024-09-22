@@ -44,3 +44,4 @@ C:\Users\пк\Desktop\Projects\Coldi\obj\Release\net8.0-windows\refint\Coldi.dll
 C:\Users\пк\Desktop\Projects\Coldi\obj\Release\net8.0-windows\Coldi.pdb
 C:\Users\пк\Desktop\Projects\Coldi\obj\Release\net8.0-windows\Coldi.genruntimeconfig.cache
 C:\Users\пк\Desktop\Projects\Coldi\obj\Release\net8.0-windows\ref\Coldi.dll
+C:\Users\пк\Desktop\Projects\Coldi\bin\Release\net8.0-windows\BCrypt.Net.dll

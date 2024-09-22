@@ -9,43 +9,61 @@ namespace Coldi.Model
         public static void findUser(string login, string password)
         {
             StartForm startForm = new StartForm();
-            int rowsCount = 0;
+            bool userFound = false;
 
             NpgsqlConnection vCon = ConnectDB.connection();
             NpgsqlCommand vCmd;
 
-            using (vCmd = new NpgsqlCommand("SELECT COUNT(*) FROM users WHERE login = @login AND password = @pass", vCon))
+            using (vCmd = new NpgsqlCommand("SELECT password FROM users WHERE login = @login", vCon))
             {
                 vCmd.Parameters.Add("@login", NpgsqlDbType.Text).Value = login;
-                vCmd.Parameters.Add("@pass", NpgsqlDbType.Text).Value = password;
+                // vCmd.Parameters.Add("@pass", NpgsqlDbType.Text).Value = password;
 
                 // Execute the command and get the result
                 using (NpgsqlDataReader reader = vCmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
-                        rowsCount = Convert.ToInt32(reader[0]); // Get the count from the reader
+                        userFound = true;
+                        //rowsCount = Convert.ToInt32(reader[0]);
+                        string storedHash = reader.GetString(0);
+
+                        if (VerifyPasswordHash(password, storedHash))
+                        {
+
+                            MessageBox.Show($"Welcome {login}");
+                            //connect form
+                            ModeSelection modeSelection = new ModeSelection(login);
+                            modeSelection.Show();
+                            //this.Close();                                                   
+                        }
+                        else
+                        {
+                            MessageBox.Show("Неверный пароль");
+                        }
                     }
-                }
+                    else
+                    {
+                        MessageBox.Show("Пользователь не найден");
+                    }
 
-                if (rowsCount > 0)
-                {
-                    MessageBox.Show($"Welcome {login}");
-                    //connect form
-                    ModeSelection modeSelection = new ModeSelection(login);
-                    modeSelection.Show();
-                    //this.Close();
 
-                }
-                else
-                {
-                    MessageBox.Show("Пользователь не найден");
                 }
             }
 
-            // Close the connection after the operation
+
             vCon.Close();
             startForm.Close();
         }
+
+        private static bool VerifyPasswordHash(string password, string storedHash)
+        {
+            // Используется bcrypt
+            var algorithm = new BCrypt.Net.BCrypt();
+            return BCrypt.Net.BCrypt.Verify(password, storedHash);
+
+        }
     }
+
+
 }
